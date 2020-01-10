@@ -1,0 +1,1382 @@
+{
+  "tinkerbots/base": {
+    "proto": "TinkerbotsBase",
+    "icon": "assets/models/tinkerbots/base/icon.png",
+    "root": true,
+    "slots": {
+      "upSlot": {
+        "type": "tinkerbots",
+        "translation": "0 0 0.02",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "upASlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.01 0.015",
+        "rotation": "0 0 1 -1.5708",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 0.01 0.015",
+        "rotation": "0 0 1 3.1415",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upCSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 0.01 0.015",
+        "rotation": "0 0 1 1.5708",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upDSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.01 0.015",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "downSlot": {
+        "type": "tinkerbots",
+        "translation": "0 0 -0.02",
+        "rotation": "0 1 0 -3.1415",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "downASlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 0.01 -0.015",
+        "rotation": "0.70710826 0.7071053 0 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "downBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.01 -0.015",
+        "rotation": "0 1 0 -3.1415",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "downCSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.01 -0.015",
+        "rotation": "-0.70710826 0.7071053 0 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "downDSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 0.01 -0.015",
+        "rotation": "-1 0 0 3.14159",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "type": "tinkerbots",
+        "translation": "0.02 0 0",
+        "rotation": "0 1 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "leftASlot": {
+        "type": "lego cross female",
+        "translation": "0.015 0.01 0.01",
+        "rotation": "0.7071053 3.2758115e-5 0.70710826 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftBSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 0.01 -0.01",
+        "rotation": "0.5773496 0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftCSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 -0.01 -0.01",
+        "rotation": "0 1 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftDSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 -0.01 0.01",
+        "rotation": "-0.5773496 0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "type": "tinkerbots",
+        "translation": "-0.02 0 0",
+        "rotation": "0 1 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "rightASlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 -0.01 0.01",
+        "rotation": "0 1 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 -0.01 -0.01",
+        "rotation": "0.5773496 -0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightCSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 0.01 -0.01",
+        "rotation": "0.7071053 0 -0.70710826 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightDSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 0.01 0.01",
+        "rotation": "-0.5773496 -0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backSlot": {
+        "type": "tinkerbots",
+        "translation": "0 -0.02 0",
+        "rotation": "1 0 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "backASlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.015 0.01",
+        "rotation": "0.5773496 -0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backBSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.015 -0.01",
+        "rotation": "1 0 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backCSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.015 -0.01",
+        "rotation": "0.5773496 0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backDSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.015 0.01",
+        "rotation": "0 0.70710677 -0.70710677 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/cube": {
+    "proto": "TinkerbotsCube",
+    "icon": "assets/models/tinkerbots/cube/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "upSlot": {
+        "type": "tinkerbots",
+        "translation": "0 0 0.04",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "upASlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.01 0.035",
+        "rotation": "0 0 1 -1.5708",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 0.01 0.035",
+        "rotation": "0 0 1 3.1415",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upCSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 0.01 0.035",
+        "rotation": "0 0 1 1.5708",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upDSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.01 0.035",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "type": "tinkerbots",
+        "translation": "0.02 0 0.02",
+        "rotation": "0 1 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "leftASlot": {
+        "type": "lego cross female",
+        "translation": "0.015 0.01 0.03",
+        "rotation": "0.7071053 3.2758115e-5 0.70710826 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftBSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 0.01 0.01",
+        "rotation": "0.5773496 0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftCSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 -0.01 0.01",
+        "rotation": "0 1 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftDSlot": {
+        "type": "lego cross female",
+        "translation": "0.015 -0.01 0.03",
+        "rotation": "-0.5773496 0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "type": "tinkerbots",
+        "translation": "-0.02 0 0.02",
+        "rotation": "0 1 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "rightASlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 -0.01 0.03",
+        "rotation": "0 1 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 -0.01 0.01",
+        "rotation": "0.5773496 -0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightCSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 0.01 0.01",
+        "rotation": "0.7071053 0 -0.70710826 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightDSlot": {
+        "type": "lego cross female",
+        "translation": "-0.015 0.01 0.03",
+        "rotation": "-0.5773496 -0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backSlot": {
+        "type": "tinkerbots",
+        "translation": "0 -0.02 0.02",
+        "rotation": "1 0 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "frontASlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 0.015 0.03",
+        "rotation": "-0.5775032 -0.57704425 -0.5775032 2.09348",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontBSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 0.015 0.01",
+        "rotation": "0 0.7068252 0.7073882 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontCSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 0.015 0.01",
+        "rotation": "-0.5775032 0.57704425 0.5775032 2.09348",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontDSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 0.015 0.03",
+        "rotation": "1 0 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "type": "tinkerbots",
+        "translation": "0 0.02 0.02",
+        "rotation": "1 0 0 -1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "backASlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.015 0.03",
+        "rotation": "0.5773496 -0.5773496 0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backBSlot": {
+        "type": "lego cross female",
+        "translation": "0.01 -0.015 0.01",
+        "rotation": "1 0 0 1.57",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backCSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.015 0.01",
+        "rotation": "0.5773496 0.5773496 -0.5773516 2.0944",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backDSlot": {
+        "type": "lego cross female",
+        "translation": "-0.01 -0.015 0.03",
+        "rotation": "0 0.70710677 -0.70710677 3.14153",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/light_sensor": {
+    "proto": "TinkerbotsLightSensor",
+    "icon": "assets/models/tinkerbots/light_sensor/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "backASlot": {
+        "rotation": "0.5773496 -0.5773496 0.5773516 2.0944",
+        "translation": "0.01 -0.015 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backBSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0.01 -0.015 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backCSlot": {
+        "rotation": "0.5773496 0.5773496 -0.5773516 2.0944",
+        "translation": "-0.01 -0.015 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backDSlot": {
+        "rotation": "0 0.70710677 -0.70710677 3.14153",
+        "translation": "-0.01 -0.015 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0 -0.02 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "leftASlot": {
+        "rotation": "0.7071053 3.2758115e-05 0.70710826 3.14153",
+        "translation": "0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftBSlot": {
+        "rotation": "0.5773496 0.5773496 0.5773516 2.0944",
+        "translation": "0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftCSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftDSlot": {
+        "rotation": "-0.5773496 0.5773496 -0.5773516 2.0944",
+        "translation": "0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "rightASlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightBSlot": {
+        "rotation": "0.5773496 -0.5773496 -0.5773516 2.0944",
+        "translation": "-0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightCSlot": {
+        "rotation": "0.7071053 0 -0.70710826 3.14153",
+        "translation": "-0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightDSlot": {
+        "rotation": "-0.5773496 -0.5773496 0.5773516 2.0944",
+        "translation": "-0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "upASlot": {
+        "rotation": "0 0 1 -1.5708",
+        "translation": "-0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upBSlot": {
+        "rotation": "0 0 1 3.1415",
+        "translation": "-0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upCSlot": {
+        "rotation": "0 0 1 1.5708",
+        "translation": "0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upDSlot": {
+        "translation": "0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "0 0 0.04",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      }
+    }
+  },
+  "tinkerbots/twister": {
+    "proto": "TinkerbotsTwister",
+    "icon": "assets/models/tinkerbots/twister/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "ASlot": {
+        "rotation": "0 0 1 -1.5708",
+        "translation": "-0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "BSlot": {
+        "rotation": "0 0 1 3.1415",
+        "translation": "-0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "CSlot": {
+        "rotation": "0 0 1 1.5708",
+        "translation": "0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "DSlot": {
+        "translation": "0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "slot": {
+        "translation": "0 0 0.04",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      }
+    }
+  },
+  "tinkerbots/pivot": {
+    "proto": "TinkerbotsPivot",
+    "icon": "assets/models/tinkerbots/pivot/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "ASlot": {
+        "rotation": "0 0 1 -1.5708",
+        "translation": "-0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "BSlot": {
+        "rotation": "0 0 1 3.1415",
+        "translation": "-0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "CSlot": {
+        "rotation": "0 0 1 1.5708",
+        "translation": "0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "DSlot": {
+        "translation": "0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "slot": {
+        "translation": "0 0 0.04",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      }
+    }
+  },
+  "tinkerbots/motor": {
+    "proto": "TinkerbotsMotor",
+    "icon": "assets/models/tinkerbots/motor/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "backSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0 -0.015 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "1 0 0 -1.57",
+        "translation": "0 0.015 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftASlot": {
+        "rotation": "0.7071053 3.2758115e-05 0.70710826 3.14153",
+        "translation": "0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftBSlot": {
+        "rotation": "0.5773496 0.5773496 0.5773516 2.0944",
+        "translation": "0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftCSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftDSlot": {
+        "rotation": "-0.5773496 0.5773496 -0.5773516 2.0944",
+        "translation": "0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "rightASlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightBSlot": {
+        "rotation": "0.5773496 -0.5773496 -0.5773516 2.0944",
+        "translation": "-0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightCSlot": {
+        "rotation": "0.7071053 0 -0.70710826 3.14153",
+        "translation": "-0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightDSlot": {
+        "rotation": "-0.5773496 -0.5773496 0.5773516 2.0944",
+        "translation": "-0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "upASlot": {
+        "rotation": "0 0 1 -1.5708",
+        "translation": "-0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upBSlot": {
+        "rotation": "0 0 1 3.1415",
+        "translation": "-0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upCSlot": {
+        "rotation": "0 0 1 1.5708",
+        "translation": "0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upDSlot": {
+        "translation": "0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "0 0 0.04",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      }
+    }
+  },
+  "tinkerbots/grabber": {
+    "proto": "TinkerbotsGrabber",
+    "icon": "assets/models/tinkerbots/grabber/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "fingerASlot": {
+        "rotation": "1 0 0 -0.0655",
+        "translation": "0 0.0156 0.0354",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "fingerBSlot": {
+        "rotation": "-0.025175689 -0.04360558 0.99873155 2.09549",
+        "translation": "-0.01351 -0.0078 0.0354",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "fingerCSlot": {
+        "rotation": "0.025175689 -0.04360558 0.99873155 4.1877",
+        "translation": "0.01351 -0.0078 0.0354",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/distance_sensor": {
+    "proto": "TinkerbotsDistanceSensor",
+    "icon": "assets/models/tinkerbots/distance_sensor/icon.png",
+    "slotType": "tinkerbots",
+    "slots": {
+      "backASlot": {
+        "rotation": "0.5773496 -0.5773496 0.5773516 2.0944",
+        "translation": "0.01 -0.015 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backBSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0.01 -0.015 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backCSlot": {
+        "rotation": "0.5773496 0.5773496 -0.5773516 2.0944",
+        "translation": "-0.01 -0.015 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backDSlot": {
+        "rotation": "0 0.70710677 -0.70710677 3.14153",
+        "translation": "-0.01 -0.015 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0 -0.02 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "leftASlot": {
+        "rotation": "0.7071053 3.2758115e-05 0.70710826 3.14153",
+        "translation": "0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftBSlot": {
+        "rotation": "0.5773496 0.5773496 0.5773516 2.0944",
+        "translation": "0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftCSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftDSlot": {
+        "rotation": "-0.5773496 0.5773496 -0.5773516 2.0944",
+        "translation": "0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "rightASlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.015 -0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightBSlot": {
+        "rotation": "0.5773496 -0.5773496 -0.5773516 2.0944",
+        "translation": "-0.015 -0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightCSlot": {
+        "rotation": "0.7071053 0 -0.70710826 3.14153",
+        "translation": "-0.015 0.01 0.01",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightDSlot": {
+        "rotation": "-0.5773496 -0.5773496 0.5773516 2.0944",
+        "translation": "-0.015 0.01 0.03",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.02 0 0.02",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      },
+      "upASlot": {
+        "rotation": "0 0 1 -1.5708",
+        "translation": "-0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upBSlot": {
+        "rotation": "0 0 1 3.1415",
+        "translation": "-0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upCSlot": {
+        "rotation": "0 0 1 1.5708",
+        "translation": "0.01 0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upDSlot": {
+        "translation": "0.01 -0.01 0.035",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "0 0 0.04",
+        "type": "tinkerbots",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0
+      }
+    }
+  },
+  "tinkerbots/axle": {
+    "proto": "TinkerbotsAxle",
+    "icon": "assets/models/tinkerbots/axle/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "endSlot": {
+        "translation": "0 0 0.022",
+        "type": "lego cross male",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.005,
+        "translationHandleVisibility": [false, false, true]
+      }
+    }
+  },
+  "tinkerbots/brick_adapter": {
+    "proto": "TinkerbotsBrickAdapter",
+    "icon": "assets/models/tinkerbots/brick_adapter/icon.png",
+    "slotType": "lego cross female",
+    "slots": {}
+  },
+  "tinkerbots/cubie_box_with_cross_slots": {
+    "proto": "TinkerbotsCubieBoxWithCrossSlots",
+    "icon": "assets/models/tinkerbots/cubie_box_with_cross_slots/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "backSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.025 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "-0.01 -0.005 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.01,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "1 0 0 -1.57",
+        "translation": "-0.01 0.005 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.01,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "-0.01 0 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.005,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/cubie_box_with_round_slots": {
+    "proto": "TinkerbotsCubieBoxWithRoundSlots",
+    "icon": "assets/models/tinkerbots/cubie_box_with_round_slots/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "axisSlot": {
+        "rotation": "1 0 0 -1.57",
+        "translation": "-0.01 -0.01 0.015",
+        "type": "lego cross female",
+        "rotationSnap": -1,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.01,
+        "translationHandleVisibility": [true, true, true]
+      },
+      "upSlot": {
+        "translation": "-0.01 0 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.005,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "backSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.025 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/cubie_female_cube": {
+    "proto": "TinkerbotsCubieFemaleCube",
+    "icon": "assets/models/tinkerbots/cubie_female_cube/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "backSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0 -0.005 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "1 0 0 -1.57",
+        "translation": "0 0.005 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "0 0 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.005,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/cubie_male_cube": {
+    "proto": "TinkerbotsCubieMaleCube",
+    "icon": "assets/models/tinkerbots/cubie_male_cube/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "backSlot": {
+        "rotation": "0 1 0 -1.57",
+        "translation": "-0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "leftSlot": {
+        "rotation": "1 0 0 1.57",
+        "translation": "0 -0.005 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "rightSlot": {
+        "rotation": "1 0 0 -1.57",
+        "translation": "0 0.01 0.015",
+        "type": "lego cross male",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "upSlot": {
+        "translation": "0 0 0.02",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.005,
+        "translationHandleVisibility": [true, true, false]
+      }
+    }
+  },
+  "tinkerbots/cubie_pyramid": {
+    "proto": "TinkerbotsCubiePyramid",
+    "icon": "assets/models/tinkerbots/cubie_pyramid/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "backSlot": {
+        "rotation": "0 1 0 -1.05",
+        "translation": "-0.0005 0 0.011",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      },
+      "frontSlot": {
+        "rotation": "0 1 0 1.05",
+        "translation": "0.0005 0 0.011",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    },
+    "parameters": {
+      "color" : [
+        "yellow",
+        "blue"
+      ]
+    }
+  },
+  "tinkerbots/cubie_triangle": {
+    "proto": "TinkerbotsCubieTriangle",
+    "icon": "assets/models/tinkerbots/cubie_triangle/icon.png",
+    "slotType": "lego cross female",
+    "slots": {
+      "slot": {
+        "rotation": "0 1 0 1.57",
+        "translation": "0.005 0 0.015",
+        "type": "lego cross female",
+        "rotationSnap": 1.5708,
+        "rotationGizmoVisibility": [false, false, true],
+        "translationSnap": 0.02,
+        "translationHandleVisibility": [true, true, false]
+      }
+    },
+    "parameters": {
+      "color" : [
+        "yellow",
+        "blue"
+      ]
+    }
+  },
+  "tinkerbots/finger": {
+    "proto": "TinkerbotsFinger",
+    "icon": "assets/models/tinkerbots/finger/icon.png",
+    "slotType": "lego cross female",
+    "slots": {}
+  },
+  "tinkerbots/wheel": {
+    "proto": "TinkerbotsWheel",
+    "icon": "assets/models/tinkerbots/wheel/icon.png",
+    "slotType": "lego cross male",
+    "slots": {}
+  }
+}

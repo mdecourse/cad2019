@@ -1,0 +1,1 @@
+python stlsplitter.py cart.stl

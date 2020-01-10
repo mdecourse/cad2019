@@ -1,0 +1,2119 @@
+<CoppeliaSim>
+    <!---->
+    <!-- All tags are optional, unless otherwise specified -->
+    <!-- Linear values are specified in meters, angular values in degrees, unless otherwise specified -->
+    <!---->
+    <!-- 'filetype' tag: required. Can be 'simpleScene' or 'simpleModel' -->
+    <filetype>simpleScene</filetype>
+    <!-- 'xmlSerializationNb' tag: required. Set to 1 -->
+    <xmlSerializationNb>1</xmlSerializationNb>
+    <!-- 'environment' tag: has no effect when loading a model -->
+    <environment>
+        <ambientLight>102 102 102</ambientLight>
+        <backgroundColor>
+            <down>12 12 25</down>
+            <up>205 221 233</up>
+        </backgroundColor>
+        <fog>
+            <enabled>false</enabled>
+            <!-- 'type' tag: can be 'linear', 'exp' or 'exp2' -->
+            <type>linear</type>
+            <startEnd>0.000000 5.000000</startEnd>
+            <density>0.500000</density>
+            <color>0 0 0</color>
+        </fog>
+        <switches>
+            <shapeTexturesEnabled>true</shapeTexturesEnabled>
+        </switches>
+        <acknowledgment></acknowledgment>
+        <extensionString>povray {fogDist {4.00} fogTransp {0.50}}</extensionString>
+    </environment>
+    <!-- 'settings' tag: has no effect when loading a model -->
+    <settings>
+        <visibleLayers>255</visibleLayers>
+        <switches>
+            <visionSensorsEnabled>true</visionSensorsEnabled>
+            <proximitySensorsEnabled>true</proximitySensorsEnabled>
+            <mirrorsEnabled>true</mirrorsEnabled>
+            <clippingPlanesEnabled>true</clippingPlanesEnabled>
+            <ikEnabled>true</ikEnabled>
+            <collisionDetectionsEnabled>true</collisionDetectionsEnabled>
+            <distanceCalculationsEnabled>true</distanceCalculationsEnabled>
+        </switches>
+    </settings>
+    <!-- 'dynamics' tag: has no effect when loading a model -->
+    <dynamics>
+        <!-- 'engine' tag: can be 'bullet', 'ode', 'vortex' or 'newton' -->
+        <engine>bullet</engine>
+        <engineVersion>0</engineVersion>
+        <!-- 'engineMode' tag: can be 'veryAccurate', 'accurate', 'fast', 'veryFast' or 'customized' -->
+        <engineMode>accurate</engineMode>
+        <gravity>0.000000 0.000000 -9.810000</gravity>
+        <switches>
+            <dynamicsEnabled>true</dynamicsEnabled>
+            <showContactPoints>false</showContactPoints>
+        </switches>
+        <engines>
+            <bullet>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>10.000000</internalscalingfactor>
+                <collisionmarginfactor>0.100000</collisionmarginfactor>
+                <constraintsolvingiterations>100</constraintsolvingiterations>
+                <constraintsolvertype>0</constraintsolvertype>
+                <fullinternalscaling>true</fullinternalscaling>
+            </bullet>
+            <ode>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>1.000000</internalscalingfactor>
+                <cfm>0.000010</cfm>
+                <erp>0.600000</erp>
+                <constraintsolvingiterations>100</constraintsolvingiterations>
+                <randomseed>-1</randomseed>
+                <fullinternalscaling>true</fullinternalscaling>
+                <quickstep>true</quickstep>
+            </ode>
+            <vortex>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>1.000000</internalscalingfactor>
+                <contacttolerance>0.001000</contacttolerance>
+                <constraintlinearcompliance>0.000000</constraintlinearcompliance>
+                <constraintlineardamping>8000000.000000</constraintlineardamping>
+                <constraintlinearkineticloss>0.000060</constraintlinearkineticloss>
+                <constraintangularcompliance>0.000000</constraintangularcompliance>
+                <constraintangulardamping>800000000.000000</constraintangulardamping>
+                <constraintangularkineticloss>0.000001</constraintangularkineticloss>
+                <autosleep>true</autosleep>
+                <multithreading>false</multithreading>
+            </vortex>
+            <newton>
+                <stepsize>0.005000</stepsize>
+                <contactmergetolerance>0.010000</contactmergetolerance>
+                <constraintsolvingiterations>8</constraintsolvingiterations>
+                <multithreading>true</multithreading>
+                <exactsolver>true</exactsolver>
+                <highjointaccuracy>true</highjointaccuracy>
+            </newton>
+        </engines>
+    </dynamics>
+    <!-- 'simulation' tag: has no effect when loading a model -->
+    <simulation>
+        <simulationTimeStep>0.050000</simulationTimeStep>
+        <simulationPassesPerRendering>1</simulationPassesPerRendering>
+        <!-- 'simulationMode' tag: can be '200ms', '100ms', '50ms', '25ms', '10ms' or 'custom' -->
+        <simulationMode>50ms</simulationMode>
+        <realTimeCoefficient>1.000000</realTimeCoefficient>
+        <simulationTimeToPause>10.000000</simulationTimeToPause>
+        <switches>
+            <realTime>false</realTime>
+            <avoidBlocking>false</avoidBlocking>
+            <pauseAtTime>false</pauseAtTime>
+            <pauseAtError>false</pauseAtError>
+            <catchUpIfLate>false</catchUpIfLate>
+            <resetAtEnd>true</resetAtEnd>
+            <removeNewObjectsAtEnd>true</removeNewObjectsAtEnd>
+        </switches>
+    </simulation>
+    <shape>
+        <common>
+            <name>base</name>
+            <altName></altName>
+            <localFrame>
+                <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                <!-- is automatically selected to be at the geometric center of the shape) -->
+                <position>0.002841 -0.005092 0.150000</position>
+                <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                <euler>-90.000008 1.814419 -90.000008</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>false</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <canUpdateDna>false</canUpdateDna>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>true</collidable>
+                <measurable>true</measurable>
+                <renderable>true</renderable>
+                <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                <ultrasonicDetectable>true</ultrasonicDetectable>
+                <infraredDetectable>true</infraredDetectable>
+                <laserDetectable>true</laserDetectable>
+                <inductiveDetectable>true</inductiveDetectable>
+                <capacitiveDetectable>true</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notRenderable>false</notRenderable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+            </localModelProperty>
+            <layer>1</layer>
+            <switches>
+                <modelBase>false</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+        <mesh>
+            <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+            <vertices>-0.150000 -0.038353 -0.030359 -0.150000 -0.249978 -0.250022 -0.150000 -0.044848 -0.022364 -0.150000 -0.021409 0.051488 -0.150000 -0.250022 0.249978 -0.150000 -0.012103 0.054164 -0.150000 -0.030364 0.046847 -0.150000 -0.038359 0.040352 -0.150000 -0.044853 0.032357 -0.150000 -0.049491 0.023400 -0.150000 -0.052166 0.014094 -0.150000 -0.053000 0.004995 -0.150000 -0.052165 -0.004103 -0.150000 -0.049488 -0.013409 -0.150000 -0.003005 0.055000 -0.150000 -0.030357 -0.036852 -0.150000 -0.021401 -0.041491 -0.150000 -0.012094 -0.044166 -0.150000 -0.002996 -0.045000 -0.150000 0.006102 -0.044165 -0.150000 0.015408 -0.041488 -0.150000 0.024364 -0.036848 -0.150000 0.250022 -0.249978 -0.150000 0.032358 -0.030353 -0.150000 0.038852 -0.022357 -0.150000 0.043491 -0.013401 0.150000 -0.003005 0.055000 -0.150000 0.006093 0.054166 0.150000 0.006093 0.054166 0.150000 0.032352 0.040358 0.150000 0.024356 0.046852 -0.150000 0.032352 0.040358 -0.150000 0.038847 0.032364 0.150000 0.038847 0.032364 0.150000 0.015400 0.051491 -0.150000 0.024356 0.046852 -0.150000 0.015400 0.051491 -0.150000 0.043487 0.023409 0.150000 0.043487 0.023408 -0.150000 0.046164 0.014102 0.150000 0.046164 0.014102 -0.150000 0.046166 -0.004094 -0.150000 0.047000 0.005004 0.150000 0.047000 0.005004 -0.150000 0.249978 0.250022 0.150000 0.250022 -0.249978 0.150000 0.249978 0.250022 0.150000 -0.250022 0.249978 0.150000 -0.249978 -0.250022 0.150000 -0.052165 -0.004103 0.150000 -0.049488 -0.013409 0.150000 0.043490 -0.013401 0.150000 0.038852 -0.022357 0.150000 -0.053000 0.004995 0.150000 0.046166 -0.004094 0.150000 -0.052166 0.014094 0.150000 -0.049491 0.023400 0.150000 -0.044853 0.032357 0.150000 0.032358 -0.030353 0.150000 -0.038359 0.040352 0.150000 -0.030365 0.046847 0.150000 -0.021409 0.051488 0.150000 -0.012103 0.054164 0.150000 -0.012094 -0.044166 0.150000 -0.021401 -0.041491 0.150000 -0.002996 -0.045000 0.150000 -0.030357 -0.036853 0.150000 0.006102 -0.044165 0.150000 -0.038353 -0.030359 0.150000 0.015408 -0.041488 0.150000 -0.044848 -0.022364 0.150000 0.024364 -0.036848</vertices>
+            <indices>0 1 2 3 4 5 6 4 3 7 4 6 8 4 7 9 4 8 10 4 9 11 4 10 12 4 11 13 4 12 2 4 13 1 4 2 5 4 14 15 1 0 16 1 15 17 1 16 18 1 17 19 1 18 20 1 19 21 1 20 22 1 21 23 22 21 24 22 23 25 22 24 26 27 28 29 30 31 32 29 31 33 29 32 34 35 30 36 35 34 37 33 32 38 33 37 28 36 34 27 36 28 39 38 37 40 38 39 41 22 25 14 27 26 42 40 39 43 40 42 44 45 22 46 45 44 4 46 44 47 46 4 1 47 4 48 47 1 22 48 1 45 48 22 33 38 45 49 48 50 51 52 45 53 48 49 54 51 45 55 48 53 43 54 45 56 48 55 40 43 45 57 48 56 38 40 45 47 48 57 52 58 45 46 33 45 29 33 46 59 47 57 30 29 46 60 47 59 34 30 46 61 47 60 28 34 46 62 47 61 26 28 46 26 47 62 48 63 64 42 22 41 39 22 42 37 22 39 32 22 37 44 22 32 31 44 32 35 44 31 36 44 35 27 44 36 14 44 27 4 44 14 31 30 35 65 63 48 66 48 64 67 65 48 68 48 66 69 67 48 70 48 68 71 69 48 45 71 48 58 71 45 50 48 70 23 52 24 58 52 23 56 8 57 17 16 63 12 50 13 49 50 12 65 17 63 18 17 65 11 49 12 53 49 11 7 57 8 59 57 7 6 59 7 60 59 6 63 16 64 9 8 56 3 60 6 61 60 3 55 9 56 10 9 55 5 61 3 62 61 5 53 10 55 11 10 53 14 62 5 26 62 14 42 41 43 21 58 23 71 58 21 51 24 52 25 24 51 20 71 21 69 71 20 54 25 51 41 25 54 19 69 20 67 69 19 43 41 54 47 26 46 18 67 19 65 67 18 0 66 15 68 66 0 2 68 0 70 68 2 64 15 66 16 15 64 13 70 2 50 70 13</indices>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <shadingAngle>0.000000</shadingAngle>
+            <culling>false</culling>
+            <wireframe>false</wireframe>
+            <color>
+                <ambientDiffuse>255 255 255</ambientDiffuse>
+                <specular>255 255 255</specular>
+                <emission>0 0 0</emission>
+            </color>
+        </mesh>
+        <dynamics>
+            <respondableMask>65535</respondableMask>
+            <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+            <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+            <mass>1.000000</mass>
+            <localInertiaFrame>
+                <position>-0.000000 0.000000 -0.000000</position>
+                <euler>-0.000010 -0.000003 0.000000</euler>
+            </localInertiaFrame>
+            <principalMomentOfInertia>0.001000 0.001000 0.001000</principalMomentOfInertia>
+            <switches>
+                <static>true</static>
+                <respondable>false</respondable>
+                <startSleeping>false</startSleeping>
+                <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+            </switches>
+            <material>
+                <engines>
+                    <bullet>
+                        <restitution>0.000000</restitution>
+                        <friction>0.710000</friction>
+                        <oldfriction>0.710000</oldfriction>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                        <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                        <sticky>false</sticky>
+                        <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                        <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                        <autoshrinkconvex>false</autoshrinkconvex>
+                    </bullet>
+                    <ode>
+                        <friction>0.710000</friction>
+                        <softerp>0.200000</softerp>
+                        <softcfm>0.000000</softcfm>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <maxcontacts>64</maxcontacts>
+                    </ode>
+                    <vortex>
+                        <primlinearaxisfriction>0.500000</primlinearaxisfriction>
+                        <seclinearaxisfriction>0.500000</seclinearaxisfriction>
+                        <primangularaxisfriction>0.000000</primangularaxisfriction>
+                        <secangularaxisfriction>0.000000</secangularaxisfriction>
+                        <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                        <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                        <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                        <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                        <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                        <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                        <compliance>0.000000</compliance>
+                        <damping>10000000.000000</damping>
+                        <restitution>0.000000</restitution>
+                        <restitutionthreshold>0.500000</restitutionthreshold>
+                        <adhesiveforce>0.000000</adhesiveforce>
+                        <linearvelocitydamping>0.000000</linearvelocitydamping>
+                        <angularvelocitydamping>0.000000</angularvelocitydamping>
+                        <primlinearaxisslide>0.000000</primlinearaxisslide>
+                        <seclinearaxisslide>0.000000</seclinearaxisslide>
+                        <primangularaxisslide>0.000000</primangularaxisslide>
+                        <secangularaxisslide>0.000000</secangularaxisslide>
+                        <normalangularaxisslide>0.000000</normalangularaxisslide>
+                        <primlinearaxisslip>0.000000</primlinearaxisslip>
+                        <seclinearaxisslip>0.000000</seclinearaxisslip>
+                        <primangularaxisslip>0.000000</primangularaxisslip>
+                        <secangularaxisslip>0.000000</secangularaxisslip>
+                        <normalangularaxisslip>0.000000</normalangularaxisslip>
+                        <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                        <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                        <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                        <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                        <skinthickness>0.000000</skinthickness>
+                        <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                        <primaxisvectorx>0.000000</primaxisvectorx>
+                        <primaxisvectory>0.000000</primaxisvectory>
+                        <primaxisvectorz>1.000000</primaxisvectorz>
+                        <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                        <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                        <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                        <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                        <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                        <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                        <materialuniqueid>31</materialuniqueid>
+                        <pureshapesasconvex>false</pureshapesasconvex>
+                        <convexshapesasrandom>false</convexshapesasrandom>
+                        <randomshapesasterrain>false</randomshapesasterrain>
+                        <fastmoving>true</fastmoving>
+                        <autoslip>false</autoslip>
+                        <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                        <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                        <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                        <autoangulardamping>false</autoangulardamping>
+                    </vortex>
+                    <newton>
+                        <staticfriction>0.500000</staticfriction>
+                        <kineticfriction>0.500000</kineticfriction>
+                        <restitution>0.000000</restitution>
+                        <lineardrag>0.000000</lineardrag>
+                        <angulardrag>0.000000</angulardrag>
+                        <fastmoving>false</fastmoving>
+                    </newton>
+                </engines>
+            </material>
+        </dynamics>
+        <shape>
+            <common>
+                <name>joint</name>
+                <altName>1</altName>
+                <localFrame>
+                    <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                    <!-- is automatically selected to be at the geometric center of the shape) -->
+                    <position>0.100000 -0.003001 0.005000</position>
+                    <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                    <euler>0.000000 90.000000 119.456657</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>true</collidable>
+                    <measurable>true</measurable>
+                    <renderable>true</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>true</ultrasonicDetectable>
+                    <infraredDetectable>true</infraredDetectable>
+                    <laserDetectable>true</laserDetectable>
+                    <inductiveDetectable>true</inductiveDetectable>
+                    <capacitiveDetectable>true</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>1</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString></extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+            <mesh>
+                <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                <vertices>-0.038099 -0.012152 -0.250002 -0.039787 -0.004153 0.249999 -0.039787 -0.004087 -0.250001 -0.019584 0.034845 0.250005 -0.012186 0.038066 0.250005 -0.019584 0.034911 -0.249995 0.019150 0.035085 0.250005 0.012022 0.038184 -0.249995 0.012021 0.038118 0.250005 0.019150 0.035151 -0.249995 -0.025939 0.030482 -0.249996 -0.025940 0.030416 0.250004 0.025220 0.031014 0.250004 0.025221 0.031080 -0.249996 -0.031047 0.025254 -0.249997 -0.031047 0.025187 0.250003 -0.039787 0.004087 0.250000 -0.039787 0.004153 -0.249999 -0.012185 0.038132 -0.249995 -0.038099 -0.012219 0.249998 -0.038151 0.011988 0.250001 -0.038151 0.012054 -0.249998 -0.034878 -0.019551 -0.250003 -0.034878 -0.019617 0.249997 -0.035118 0.019117 0.250003 -0.035118 0.019183 -0.249997 -0.030449 -0.025907 -0.250003 -0.030449 -0.025973 0.249997 -0.025220 -0.031014 -0.250004 -0.004120 0.039820 -0.249995 0.004120 0.039754 0.250005 0.004120 0.039820 -0.249995 -0.004120 0.039754 0.250005 0.034878 0.019617 -0.249997 0.038099 0.012152 0.250002 0.038099 0.012219 -0.249998 0.034878 0.019551 0.250002 0.035118 -0.019183 0.249997 0.038151 -0.011988 -0.250002 0.038151 -0.012054 0.249998 0.035118 -0.019117 -0.250003 0.030449 0.025973 -0.249997 0.030449 0.025907 0.250003 0.031047 -0.025254 0.249997 0.031047 -0.025187 -0.250003 0.039787 -0.004087 -0.250001 0.039787 0.004153 -0.249999 0.025940 -0.030416 -0.250004 0.019584 -0.034911 0.249995 0.019584 -0.034845 -0.250005 -0.025221 -0.031080 0.249996 0.004120 -0.039754 -0.250005 -0.004120 -0.039820 0.249995 -0.004120 -0.039754 -0.250005 0.004120 -0.039820 0.249995 0.012186 -0.038066 -0.250005 0.012185 -0.038132 0.249995 -0.012021 -0.038184 0.249995 -0.012021 -0.038118 -0.250005 -0.019150 -0.035151 0.249995 -0.019150 -0.035085 -0.250005 0.025940 -0.030482 0.249996 0.039787 -0.004153 0.249999 0.039787 0.004087 0.250001</vertices>
+                <indices>0 1 2 3 4 5 6 7 8 9 7 6 10 3 5 11 3 10 12 9 6 13 9 12 14 11 10 15 11 14 2 16 17 1 16 2 5 4 18 19 1 0 20 17 16 21 17 20 22 19 0 23 19 22 24 21 20 25 21 24 26 23 22 27 23 26 15 25 24 14 25 15 28 27 26 29 30 31 32 30 29 18 32 29 4 32 18 8 31 30 7 31 8 9 13 33 33 34 35 36 34 33 37 38 39 40 38 37 41 36 33 42 36 41 43 40 37 44 40 43 13 42 41 12 42 13 33 13 41 38 45 39 35 9 33 7 9 35 46 7 35 31 7 46 45 31 46 29 31 45 38 29 45 18 29 38 40 18 38 5 18 40 44 5 40 47 48 49 50 27 28 51 52 53 54 52 51 55 54 51 56 54 55 57 53 52 58 53 57 49 56 55 48 56 49 59 58 57 60 58 59 61 48 47 50 60 59 28 60 50 44 61 47 43 61 44 46 62 45 63 62 46 35 63 46 34 63 35 39 45 62 10 5 44 23 27 30 36 54 34 52 54 36 42 52 36 57 52 42 12 57 42 59 57 12 6 59 12 50 59 6 8 50 6 27 50 8 30 27 8 54 56 34 32 23 30 19 23 32 4 19 32 1 19 4 3 1 4 16 1 3 11 16 3 20 16 11 15 20 11 24 20 15 0 2 58 47 10 44 14 10 47 49 14 47 25 14 49 55 25 49 21 25 55 51 21 55 17 21 51 53 17 51 2 17 53 58 2 53 60 0 58 22 0 60 28 22 60 26 22 28 39 43 37 61 43 39 62 61 39 48 61 62 63 48 62 56 48 63 34 56 63</indices>
+                <localFrame>
+                    <position>0.000000 0.000000 0.000000</position>
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localFrame>
+                <shadingAngle>0.000000</shadingAngle>
+                <culling>false</culling>
+                <wireframe>false</wireframe>
+                <color>
+                    <ambientDiffuse>255 255 255</ambientDiffuse>
+                    <specular>255 255 255</specular>
+                    <emission>0 0 0</emission>
+                </color>
+            </mesh>
+            <dynamics>
+                <respondableMask>65535</respondableMask>
+                <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+                <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+                <mass>1.000000</mass>
+                <localInertiaFrame>
+                    <position>0.000000 0.000000 -0.000000</position>
+                    <euler>-0.000000 0.000000 0.000007</euler>
+                </localInertiaFrame>
+                <principalMomentOfInertia>0.001000 0.001000 0.001000</principalMomentOfInertia>
+                <switches>
+                    <static>true</static>
+                    <respondable>false</respondable>
+                    <startSleeping>false</startSleeping>
+                    <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+                </switches>
+                <material>
+                    <engines>
+                        <bullet>
+                            <restitution>0.000000</restitution>
+                            <friction>0.710000</friction>
+                            <oldfriction>0.710000</oldfriction>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                            <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                            <sticky>false</sticky>
+                            <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                            <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                            <autoshrinkconvex>false</autoshrinkconvex>
+                        </bullet>
+                        <ode>
+                            <friction>0.710000</friction>
+                            <softerp>0.200000</softerp>
+                            <softcfm>0.000000</softcfm>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <maxcontacts>64</maxcontacts>
+                        </ode>
+                        <vortex>
+                            <primlinearaxisfriction>0.500000</primlinearaxisfriction>
+                            <seclinearaxisfriction>0.500000</seclinearaxisfriction>
+                            <primangularaxisfriction>0.000000</primangularaxisfriction>
+                            <secangularaxisfriction>0.000000</secangularaxisfriction>
+                            <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                            <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                            <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                            <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                            <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                            <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                            <compliance>0.000000</compliance>
+                            <damping>10000000.000000</damping>
+                            <restitution>0.000000</restitution>
+                            <restitutionthreshold>0.500000</restitutionthreshold>
+                            <adhesiveforce>0.000000</adhesiveforce>
+                            <linearvelocitydamping>0.000000</linearvelocitydamping>
+                            <angularvelocitydamping>0.000000</angularvelocitydamping>
+                            <primlinearaxisslide>0.000000</primlinearaxisslide>
+                            <seclinearaxisslide>0.000000</seclinearaxisslide>
+                            <primangularaxisslide>0.000000</primangularaxisslide>
+                            <secangularaxisslide>0.000000</secangularaxisslide>
+                            <normalangularaxisslide>0.000000</normalangularaxisslide>
+                            <primlinearaxisslip>0.000000</primlinearaxisslip>
+                            <seclinearaxisslip>0.000000</seclinearaxisslip>
+                            <primangularaxisslip>0.000000</primangularaxisslip>
+                            <secangularaxisslip>0.000000</secangularaxisslip>
+                            <normalangularaxisslip>0.000000</normalangularaxisslip>
+                            <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                            <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                            <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                            <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                            <skinthickness>0.000000</skinthickness>
+                            <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                            <primaxisvectorx>0.000000</primaxisvectorx>
+                            <primaxisvectory>0.000000</primaxisvectory>
+                            <primaxisvectorz>1.000000</primaxisvectorz>
+                            <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                            <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                            <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                            <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                            <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                            <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                            <materialuniqueid>32</materialuniqueid>
+                            <pureshapesasconvex>false</pureshapesasconvex>
+                            <convexshapesasrandom>false</convexshapesasrandom>
+                            <randomshapesasterrain>false</randomshapesasterrain>
+                            <fastmoving>true</fastmoving>
+                            <autoslip>false</autoslip>
+                            <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                            <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                            <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                            <autoangulardamping>false</autoangulardamping>
+                        </vortex>
+                        <newton>
+                            <staticfriction>0.500000</staticfriction>
+                            <kineticfriction>0.500000</kineticfriction>
+                            <restitution>0.000000</restitution>
+                            <lineardrag>0.000000</lineardrag>
+                            <angulardrag>0.000000</angulardrag>
+                            <fastmoving>false</fastmoving>
+                        </newton>
+                    </engines>
+                </material>
+            </dynamics>
+            <shape>
+                <common>
+                    <name>link</name>
+                    <altName>0</altName>
+                    <localFrame>
+                        <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                        <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                        <!-- is automatically selected to be at the geometric center of the shape) -->
+                        <position>0.299969 0.004274 0.200001</position>
+                        <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                        <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                        <euler>-89.989876 89.187706 -90.002403</euler>
+                    </localFrame>
+                    <hierarchyColorIndex>-1</hierarchyColorIndex>
+                    <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                    <localObjectProperty>
+                        <hierarchyCollapsed>false</hierarchyCollapsed>
+                        <selectable>true</selectable>
+                        <selectModelBaseInstead>false</selectModelBaseInstead>
+                        <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                        <canUpdateDna>false</canUpdateDna>
+                        <selectInvisible>false</selectInvisible>
+                        <depthInvisible>false</depthInvisible>
+                        <cannotDelete>false</cannotDelete>
+                        <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                    </localObjectProperty>
+                    <localObjectSpecialProperty>
+                        <collidable>true</collidable>
+                        <measurable>true</measurable>
+                        <renderable>true</renderable>
+                        <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                        <ultrasonicDetectable>true</ultrasonicDetectable>
+                        <infraredDetectable>true</infraredDetectable>
+                        <laserDetectable>true</laserDetectable>
+                        <inductiveDetectable>true</inductiveDetectable>
+                        <capacitiveDetectable>true</capacitiveDetectable>
+                    </localObjectSpecialProperty>
+                    <localModelProperty>
+                        <notCollidable>false</notCollidable>
+                        <notMeasurable>false</notMeasurable>
+                        <notRenderable>false</notRenderable>
+                        <notDetectable>false</notDetectable>
+                        <notDynamic>false</notDynamic>
+                        <notRespondable>false</notRespondable>
+                        <notReset>false</notReset>
+                        <notVisible>false</notVisible>
+                        <scriptsInactive>false</scriptsInactive>
+                        <notShowAsInsideModel>false</notShowAsInsideModel>
+                    </localModelProperty>
+                    <layer>1</layer>
+                    <switches>
+                        <modelBase>false</modelBase>
+                        <ignoredByViewFitting>false</ignoredByViewFitting>
+                    </switches>
+                    <extensionString></extensionString>
+                    <modelAcknowledgement></modelAcknowledgement>
+                </common>
+                <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+                <mesh>
+                    <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                    <vertices>0.050000 -0.046438 -0.318412 0.050000 -0.099920 -0.500016 0.050000 -0.041797 -0.327367 0.050000 0.018445 -0.253508 0.050000 0.027402 -0.258146 0.050000 0.099920 0.500016 0.050000 -0.018349 -0.346492 0.050000 0.100080 -0.499984 0.050000 0.000056 -0.350000 0.050000 0.000040 -0.250000 0.050000 -0.027306 -0.341854 0.050000 -0.018364 -0.253514 0.050000 -0.035302 -0.335361 0.050000 -0.027319 -0.258155 0.050000 -0.035313 -0.264650 0.050000 -0.041806 -0.272646 0.050000 -0.046444 -0.281603 0.050000 -0.049952 -0.300008 0.050000 -0.100080 0.499984 0.050000 0.018460 -0.346486 -0.050000 -0.049952 -0.300008 -0.050000 -0.018349 -0.346492 -0.050000 0.000056 -0.350000 -0.050000 -0.027306 -0.341854 -0.050000 -0.035302 -0.335361 -0.050000 -0.041797 -0.327367 -0.050000 -0.046438 -0.318412 -0.050000 -0.046444 -0.281603 -0.050000 -0.041806 -0.272646 -0.050000 -0.035313 -0.264650 -0.050000 -0.027319 -0.258155 -0.050000 -0.018364 -0.253514 -0.050000 0.000040 -0.250000 0.050000 0.050048 -0.299992 0.050000 0.046535 -0.281588 -0.050000 0.050048 -0.299992 -0.050000 0.018445 -0.253508 -0.050000 0.027402 -0.258146 -0.050000 0.035398 -0.264639 0.050000 0.035398 -0.264639 -0.050000 0.041894 -0.272633 0.050000 0.041894 -0.272633 -0.050000 0.046535 -0.281588 -0.050000 0.046541 -0.318397 0.050000 0.046541 -0.318397 -0.050000 0.041902 -0.327354 0.050000 0.041902 -0.327354 -0.050000 0.035409 -0.335350 0.050000 0.035409 -0.335350 -0.050000 0.027415 -0.341845 0.050000 0.027415 -0.341845 -0.050000 0.018460 -0.346486 -0.050000 -0.099920 -0.500016 -0.050000 -0.100080 0.499984 -0.050000 0.100080 -0.499984 -0.050000 0.099920 0.500016</vertices>
+                    <indices>0 1 2 3 4 5 6 7 8 9 3 5 10 7 6 11 9 5 12 7 10 13 11 5 1 7 12 14 13 5 2 1 12 15 14 5 16 15 5 17 1 0 17 16 5 18 17 5 1 17 18 8 7 19 17 0 20 21 8 22 6 8 21 23 6 21 10 6 23 24 10 23 12 10 24 25 12 24 2 12 25 26 2 25 0 2 26 20 0 26 8 19 22 27 17 20 16 17 27 28 16 27 15 16 28 29 15 28 14 15 29 30 14 29 13 14 30 31 13 30 11 13 31 32 11 31 33 34 35 36 9 32 3 9 36 37 3 36 4 3 37 38 4 37 39 4 38 40 39 38 41 39 40 42 41 40 34 41 42 35 34 42 9 11 32 43 33 35 44 33 43 45 44 43 46 44 45 47 46 45 48 46 47 49 48 47 50 48 49 51 50 49 19 50 51 22 19 51 52 53 20 40 53 42 38 53 40 37 53 38 36 53 37 32 53 36 31 53 32 30 53 31 29 53 30 28 53 29 27 53 28 20 53 27 53 54 42 55 54 53 7 44 46 33 44 7 48 7 46 34 33 7 5 34 7 41 34 5 50 7 48 39 41 5 19 7 50 4 39 5 23 52 24 53 5 55 18 5 53 52 18 53 1 18 52 54 1 52 7 1 54 55 7 54 5 7 55 26 52 20 25 52 26 24 52 25 21 52 23 22 52 21 51 52 22 49 52 51 47 52 49 54 52 47 45 54 47 43 54 45 35 54 43 42 54 35</indices>
+                    <localFrame>
+                        <position>0.000000 0.000000 0.000000</position>
+                        <euler>-0.000000 0.000000 -0.000000</euler>
+                    </localFrame>
+                    <shadingAngle>0.000000</shadingAngle>
+                    <culling>false</culling>
+                    <wireframe>false</wireframe>
+                    <color>
+                        <ambientDiffuse>255 255 255</ambientDiffuse>
+                        <specular>255 255 255</specular>
+                        <emission>0 0 0</emission>
+                    </color>
+                </mesh>
+                <dynamics>
+                    <respondableMask>65535</respondableMask>
+                    <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+                    <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+                    <mass>1.000000</mass>
+                    <localInertiaFrame>
+                        <position>0.000000 0.000000 -0.000000</position>
+                        <euler>0.000003 0.000000 0.000000</euler>
+                    </localInertiaFrame>
+                    <principalMomentOfInertia>0.001000 0.001000 0.001000</principalMomentOfInertia>
+                    <switches>
+                        <static>true</static>
+                        <respondable>false</respondable>
+                        <startSleeping>false</startSleeping>
+                        <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+                    </switches>
+                    <material>
+                        <engines>
+                            <bullet>
+                                <restitution>0.000000</restitution>
+                                <friction>0.710000</friction>
+                                <oldfriction>0.710000</oldfriction>
+                                <lineardamping>0.000000</lineardamping>
+                                <angulardamping>0.000000</angulardamping>
+                                <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                                <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                                <sticky>false</sticky>
+                                <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                                <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                                <autoshrinkconvex>false</autoshrinkconvex>
+                            </bullet>
+                            <ode>
+                                <friction>0.710000</friction>
+                                <softerp>0.200000</softerp>
+                                <softcfm>0.000000</softcfm>
+                                <lineardamping>0.000000</lineardamping>
+                                <angulardamping>0.000000</angulardamping>
+                                <maxcontacts>64</maxcontacts>
+                            </ode>
+                            <vortex>
+                                <primlinearaxisfriction>0.500000</primlinearaxisfriction>
+                                <seclinearaxisfriction>0.500000</seclinearaxisfriction>
+                                <primangularaxisfriction>0.000000</primangularaxisfriction>
+                                <secangularaxisfriction>0.000000</secangularaxisfriction>
+                                <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                                <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                                <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                                <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                                <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                                <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                                <compliance>0.000000</compliance>
+                                <damping>10000000.000000</damping>
+                                <restitution>0.000000</restitution>
+                                <restitutionthreshold>0.500000</restitutionthreshold>
+                                <adhesiveforce>0.000000</adhesiveforce>
+                                <linearvelocitydamping>0.000000</linearvelocitydamping>
+                                <angularvelocitydamping>0.000000</angularvelocitydamping>
+                                <primlinearaxisslide>0.000000</primlinearaxisslide>
+                                <seclinearaxisslide>0.000000</seclinearaxisslide>
+                                <primangularaxisslide>0.000000</primangularaxisslide>
+                                <secangularaxisslide>0.000000</secangularaxisslide>
+                                <normalangularaxisslide>0.000000</normalangularaxisslide>
+                                <primlinearaxisslip>0.000000</primlinearaxisslip>
+                                <seclinearaxisslip>0.000000</seclinearaxisslip>
+                                <primangularaxisslip>0.000000</primangularaxisslip>
+                                <secangularaxisslip>0.000000</secangularaxisslip>
+                                <normalangularaxisslip>0.000000</normalangularaxisslip>
+                                <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                                <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                                <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                                <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                                <skinthickness>0.000000</skinthickness>
+                                <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                                <primaxisvectorx>0.000000</primaxisvectorx>
+                                <primaxisvectory>0.000000</primaxisvectory>
+                                <primaxisvectorz>1.000000</primaxisvectorz>
+                                <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                                <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                                <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                                <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                                <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                                <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                                <materialuniqueid>33</materialuniqueid>
+                                <pureshapesasconvex>false</pureshapesasconvex>
+                                <convexshapesasrandom>false</convexshapesasrandom>
+                                <randomshapesasterrain>false</randomshapesasterrain>
+                                <fastmoving>true</fastmoving>
+                                <autoslip>false</autoslip>
+                                <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                                <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                                <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                                <autoangulardamping>false</autoangulardamping>
+                            </vortex>
+                            <newton>
+                                <staticfriction>0.500000</staticfriction>
+                                <kineticfriction>0.500000</kineticfriction>
+                                <restitution>0.000000</restitution>
+                                <lineardrag>0.000000</lineardrag>
+                                <angulardrag>0.000000</angulardrag>
+                                <fastmoving>false</fastmoving>
+                            </newton>
+                        </engines>
+                    </material>
+                </dynamics>
+            </shape>
+        </shape>
+    </shape>
+    <camera>
+        <common>
+            <name>DefaultCamera</name>
+            <altName>DefaultCamera</altName>
+            <localFrame>
+                <position>1.322796 -1.845935 0.841578</position>
+                <euler>-103.833778 -32.194023 172.525574</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>false</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <canUpdateDna>false</canUpdateDna>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <renderable>false</renderable>
+                <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notRenderable>false</notRenderable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+            </localModelProperty>
+            <layer>4096</layer>
+            <switches>
+                <modelBase>false</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <mainCamera>true</mainCamera>
+        <trackedObject></trackedObject>
+        <size>0.050000</size>
+        <orthoViewSize>2.000000</orthoViewSize>
+        <viewAngle>60.000000</viewAngle>
+        <clippingPlanes>0.050000 70.000000</clippingPlanes>
+        <color>
+            <part1>255 75 75</part1>
+            <part2>165 165 165</part2>
+        </color>
+    </camera>
+    <dummy>
+        <common>
+            <name>XYZCameraProxy</name>
+            <altName>XYZCameraProxy</altName>
+            <localFrame>
+                <position>0.000000 0.000000 0.750000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                <canUpdateDna>true</canUpdateDna>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <renderable>false</renderable>
+                <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notRenderable>false</notRenderable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+            </localModelProperty>
+            <layer>1024</layer>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <size>0.010000</size>
+        <linkedDummy></linkedDummy>
+        <!-- 'linkType' tag: can be 'dynamics_loopClosure', 'dynamics_forceConstraint' or 'ik_tipTarget' -->
+        <linkType>dynamics_loopClosure</linkType>
+        <color>
+            <object>255 196 138</object>
+        </color>
+        <camera>
+            <common>
+                <name>DefaultXViewCamera</name>
+                <altName>DefaultXViewCamera</altName>
+                <localFrame>
+                    <position>20.000000 0.000000 0.000000</position>
+                    <euler>0.000000 -90.000000 -90.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+        <camera>
+            <common>
+                <name>DefaultYViewCamera</name>
+                <altName>DefaultYViewCamera</altName>
+                <localFrame>
+                    <position>0.000000 20.000000 0.000000</position>
+                    <euler>89.999985 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+        <camera>
+            <common>
+                <name>DefaultZViewCamera</name>
+                <altName>DefaultZViewCamera</altName>
+                <localFrame>
+                    <position>0.000000 0.000000 20.000000</position>
+                    <euler>-179.999969 0.000000 0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+        <camera>
+            <common>
+                <name>DefaultNXViewCamera</name>
+                <altName>DefaultNXViewCamera</altName>
+                <localFrame>
+                    <position>-20.000000 -0.000002 0.000000</position>
+                    <euler>0.000000 90.000000 90.000008</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+        <camera>
+            <common>
+                <name>DefaultNYViewCamera</name>
+                <altName>DefaultNYViewCamera</altName>
+                <localFrame>
+                    <position>0.000002 -20.000000 0.000000</position>
+                    <euler>-90.000008 -0.000005 179.999985</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+        <camera>
+            <common>
+                <name>DefaultNZViewCamera</name>
+                <altName>DefaultNZViewCamera</altName>
+                <localFrame>
+                    <position>0.000002 0.000000 -21.500000</position>
+                    <euler>0.000005 -0.000005 0.000005</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <trackedObject></trackedObject>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <color>
+                <part1>255 75 75</part1>
+                <part2>165 165 165</part2>
+            </color>
+        </camera>
+    </dummy>
+    <dummy>
+        <common>
+            <name>ResizableFloor_5_25</name>
+            <altName>ResizableFloor_5_25</altName>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>false</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <canUpdateDna>true</canUpdateDna>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <renderable>false</renderable>
+                <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notRenderable>false</notRenderable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+            </localModelProperty>
+            <layer>0</layer>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>true</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <size>0.010000</size>
+        <linkedDummy></linkedDummy>
+        <!-- 'linkType' tag: can be 'dynamics_loopClosure', 'dynamics_forceConstraint' or 'ik_tipTarget' -->
+        <linkType>ik_tipTarget</linkType>
+        <color>
+            <object>255 190 123</object>
+        </color>
+        <customizationScript>
+            <switches>
+                <enabled>true</enabled>
+                <disableCustomizationScriptWithError>true</disableCustomizationScriptWithError>
+            </switches>
+            <executionOrder>1</executionOrder>
+            <treeTraversalDirection>0</treeTraversalDirection>
+            <scriptText>function sysCall_init()
+    model=sim.getObjectAssociatedWithScript(sim.handle_self)
+    e1=sim.getObjectHandle('ResizableFloor_5_25_element')
+    e2=sim.getObjectHandle('ResizableFloor_5_25_visibleElement')
+end
+
+function sysCall_cleanup()
+    hideDlg()
+end
+
+function sysCall_nonSimulation()
+    local s=sim.getObjectSelection()
+    if s and #s&gt;=1 and s[1]==model then
+        showDlg()
+    else
+        hideDlg()
+    end
+end
+
+function sysCall_beforeSimulation()
+    hideDlg()
+end
+
+function sysCall_beforeSimulation()
+    hideDlg()
+end
+
+function updateFloor()
+    local c=readInfo()
+    local sx=c['sizes'][1]/5
+    local sy=c['sizes'][2]/5
+    local sizeFact=sim.getObjectSizeFactor(model)
+    sim.setObjectParent(e1,-1,true)
+    local child=sim.getObjectChild(model,0)
+    while child~=-1 do
+        sim.removeObject(child)
+        child=sim.getObjectChild(model,0)
+    end
+    local xPosInit=(sx-1)*-2.5*sizeFact
+    local yPosInit=(sy-1)*-2.5*sizeFact
+    local f1,f2
+    for x=1,sx,1 do
+        for y=1,sy,1 do
+            if (x==1)and(y==1) then
+                sim.setObjectParent(e1,model,true)
+                f1=e1
+            else
+                f1=sim.copyPasteObjects({e1},0)[1]
+                f2=sim.copyPasteObjects({e2},0)[1]
+                sim.setObjectParent(f1,model,true)
+                sim.setObjectParent(f2,f1,true)
+            end
+            local p=sim.getObjectPosition(f1,sim.handle_parent)
+            p[1]=xPosInit+(x-1)*5*sizeFact
+            p[2]=yPosInit+(y-1)*5*sizeFact
+            sim.setObjectPosition(f1,sim.handle_parent,p)
+        end
+    end
+end
+
+function getDefaultInfoForNonExistingFields(info)
+    if not info['version'] then
+        info['version']=0
+    end
+    if not info['sizes'] then
+        info['sizes']={1,1}
+    end
+end
+
+function readInfo()
+    local data=sim.readCustomDataBlock(model,'XYZ_FLOOR_INFO')
+    if data then
+        data=sim.unpackTable(data)
+    else
+        data={}
+    end
+    getDefaultInfoForNonExistingFields(data)
+    return data
+end
+
+function writeInfo(data)
+    if data then
+        sim.writeCustomDataBlock(model,'XYZ_FLOOR_INFO',sim.packTable(data))
+    else
+        sim.writeCustomDataBlock(model,'XYZ_FLOOR_INFO','')
+    end
+end
+
+function updateUi()
+    local c=readInfo()
+    local sizeFact=sim.getObjectSizeFactor(model)
+    simUI.setLabelText(ui,1,'X-size (m): '..string.format("%.2f",c['sizes'][1]*sizeFact),true)
+    simUI.setSliderValue(ui,2,c['sizes'][1]/5,true)
+    simUI.setLabelText(ui,3,'Y-size (m): '..string.format("%.2f",c['sizes'][2]*sizeFact),true)
+    simUI.setSliderValue(ui,4,c['sizes'][2]/5,true)
+end
+
+function sliderXChange(ui,id,newVal)
+    local c=readInfo()
+    c['sizes'][1]=newVal*5
+    writeInfo(c)
+    updateUi()
+    updateFloor()
+end
+
+function sliderYChange(ui,id,newVal)
+    local c=readInfo()
+    c['sizes'][2]=newVal*5
+    writeInfo(c)
+    updateUi()
+    updateFloor()
+end
+
+function closeEventHandler(h)
+    sim.removeScript(sim.handle_self)
+end
+
+function showDlg()
+    if not ui then
+    xml = [[
+&lt;ui title="Floor Customizer" closeable="true" on-close="closeEventHandler" resizable="false" activate="false"&gt;
+    &lt;group layout="form" flat="true"&gt;
+        &lt;label text="X-size (m): 1" id="1"/&gt;
+        &lt;hslider tick-position="above" tick-interval="1" minimum="1" maximum="5" on-change="sliderXChange" id="2"/&gt;
+        &lt;label text="Y-size (m): 1" id="3"/&gt;
+        &lt;hslider tick-position="above" tick-interval="1" minimum="1" maximum="5" on-change="sliderYChange" id="4"/&gt;
+    &lt;/group&gt;
+    &lt;label text="" style="* {margin-left: 400px;}"/&gt;
+&lt;/ui&gt;
+]]
+        ui=simUI.create(xml)
+        if 2==sim.getInt32Parameter(sim.intparam_platform) then
+            -- To fix a Qt bug on Linux
+            sim.auxFunc('activateMainWindow')
+        end
+        updateUi()
+    end
+end
+
+function hideDlg()
+    if ui then
+        simUI.destroy(ui)
+        ui=nil
+    end
+end
+</scriptText>
+        </customizationScript>
+        <shape>
+            <common>
+                <name>ResizableFloor_5_25_element</name>
+                <altName>2</altName>
+                <localFrame>
+                    <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                    <!-- is automatically selected to be at the geometric center of the shape) -->
+                    <position>0.000000 0.000000 -0.020000</position>
+                    <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>true</hierarchyCollapsed>
+                    <selectable>false</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>32768</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>true</ignoredByViewFitting>
+                </switches>
+                <extensionString></extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+            <primitive>
+                <!-- 'type' tag: required. Can be one of following: 'cuboid', 'sphere', 'cylinder', 'cone', 'plane' or 'disc' -->
+                <type>cuboid</type>
+                <size>5.000000 5.000000 0.040000</size>
+                <localFrame>
+                    <position>0.000000 0.000000 0.000000</position>
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localFrame>
+                <shadingAngle>20.000000</shadingAngle>
+                <culling>true</culling>
+                <wireframe>false</wireframe>
+                <color>
+                    <ambientDiffuse>255 204 255</ambientDiffuse>
+                    <specular>38 38 38</specular>
+                    <emission>0 0 0</emission>
+                </color>
+            </primitive>
+            <dynamics>
+                <respondableMask>65535</respondableMask>
+                <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+                <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+                <mass>1000.000000</mass>
+                <localInertiaFrame>
+                    <position>0.000000 0.000000 0.000000</position>
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localInertiaFrame>
+                <principalMomentOfInertia>2.083467 2.083467 4.166667</principalMomentOfInertia>
+                <switches>
+                    <static>true</static>
+                    <respondable>true</respondable>
+                    <startSleeping>false</startSleeping>
+                    <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+                </switches>
+                <material>
+                    <engines>
+                        <bullet>
+                            <restitution>0.500000</restitution>
+                            <friction>1.000000</friction>
+                            <oldfriction>1.000000</oldfriction>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                            <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                            <sticky>false</sticky>
+                            <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                            <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                            <autoshrinkconvex>false</autoshrinkconvex>
+                        </bullet>
+                        <ode>
+                            <friction>1.000000</friction>
+                            <softerp>0.200000</softerp>
+                            <softcfm>0.000000</softcfm>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <maxcontacts>64</maxcontacts>
+                        </ode>
+                        <vortex>
+                            <primlinearaxisfriction>1.000000</primlinearaxisfriction>
+                            <seclinearaxisfriction>1.000000</seclinearaxisfriction>
+                            <primangularaxisfriction>0.000000</primangularaxisfriction>
+                            <secangularaxisfriction>0.000000</secangularaxisfriction>
+                            <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                            <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                            <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                            <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                            <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                            <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                            <compliance>0.000000</compliance>
+                            <damping>10000000.000000</damping>
+                            <restitution>0.000000</restitution>
+                            <restitutionthreshold>0.500000</restitutionthreshold>
+                            <adhesiveforce>0.000000</adhesiveforce>
+                            <linearvelocitydamping>0.000000</linearvelocitydamping>
+                            <angularvelocitydamping>0.000000</angularvelocitydamping>
+                            <primlinearaxisslide>0.000000</primlinearaxisslide>
+                            <seclinearaxisslide>0.000000</seclinearaxisslide>
+                            <primangularaxisslide>0.000000</primangularaxisslide>
+                            <secangularaxisslide>0.000000</secangularaxisslide>
+                            <normalangularaxisslide>0.000000</normalangularaxisslide>
+                            <primlinearaxisslip>0.000000</primlinearaxisslip>
+                            <seclinearaxisslip>0.000000</seclinearaxisslip>
+                            <primangularaxisslip>0.000000</primangularaxisslip>
+                            <secangularaxisslip>0.000000</secangularaxisslip>
+                            <normalangularaxisslip>0.000000</normalangularaxisslip>
+                            <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                            <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                            <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                            <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                            <skinthickness>0.002000</skinthickness>
+                            <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                            <primaxisvectorx>0.000000</primaxisvectorx>
+                            <primaxisvectory>0.000000</primaxisvectory>
+                            <primaxisvectorz>1.000000</primaxisvectorz>
+                            <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                            <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                            <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                            <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                            <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                            <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                            <materialuniqueid>35</materialuniqueid>
+                            <pureshapesasconvex>false</pureshapesasconvex>
+                            <convexshapesasrandom>false</convexshapesasrandom>
+                            <randomshapesasterrain>false</randomshapesasterrain>
+                            <fastmoving>true</fastmoving>
+                            <autoslip>false</autoslip>
+                            <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                            <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                            <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                            <autoangulardamping>false</autoangulardamping>
+                        </vortex>
+                        <newton>
+                            <staticfriction>1.000000</staticfriction>
+                            <kineticfriction>1.000000</kineticfriction>
+                            <restitution>0.000000</restitution>
+                            <lineardrag>0.000000</lineardrag>
+                            <angulardrag>0.000000</angulardrag>
+                            <fastmoving>false</fastmoving>
+                        </newton>
+                    </engines>
+                </material>
+            </dynamics>
+            <shape>
+                <common>
+                    <name>ResizableFloor_5_25_visibleElement</name>
+                    <altName>3</altName>
+                    <localFrame>
+                        <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                        <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                        <!-- is automatically selected to be at the geometric center of the shape) -->
+                        <position>0.000000 0.000000 0.020000</position>
+                        <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                        <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                        <euler>-0.000000 0.000000 -0.000000</euler>
+                    </localFrame>
+                    <hierarchyColorIndex>-1</hierarchyColorIndex>
+                    <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                    <localObjectProperty>
+                        <hierarchyCollapsed>false</hierarchyCollapsed>
+                        <selectable>false</selectable>
+                        <selectModelBaseInstead>false</selectModelBaseInstead>
+                        <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                        <canUpdateDna>false</canUpdateDna>
+                        <selectInvisible>false</selectInvisible>
+                        <depthInvisible>false</depthInvisible>
+                        <cannotDelete>false</cannotDelete>
+                        <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                    </localObjectProperty>
+                    <localObjectSpecialProperty>
+                        <collidable>false</collidable>
+                        <measurable>false</measurable>
+                        <renderable>true</renderable>
+                        <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                        <ultrasonicDetectable>true</ultrasonicDetectable>
+                        <infraredDetectable>true</infraredDetectable>
+                        <laserDetectable>true</laserDetectable>
+                        <inductiveDetectable>true</inductiveDetectable>
+                        <capacitiveDetectable>true</capacitiveDetectable>
+                    </localObjectSpecialProperty>
+                    <localModelProperty>
+                        <notCollidable>false</notCollidable>
+                        <notMeasurable>false</notMeasurable>
+                        <notRenderable>false</notRenderable>
+                        <notDetectable>false</notDetectable>
+                        <notDynamic>false</notDynamic>
+                        <notRespondable>false</notRespondable>
+                        <notReset>false</notReset>
+                        <notVisible>false</notVisible>
+                        <scriptsInactive>false</scriptsInactive>
+                        <notShowAsInsideModel>false</notShowAsInsideModel>
+                    </localModelProperty>
+                    <layer>128</layer>
+                    <switches>
+                        <modelBase>false</modelBase>
+                        <ignoredByViewFitting>true</ignoredByViewFitting>
+                    </switches>
+                    <extensionString></extensionString>
+                    <modelAcknowledgement></modelAcknowledgement>
+                </common>
+                <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+                <compound>
+                    <mesh>
+                        <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                        <vertices>0.000000 -2.000000 -2.500000 0.000000 -1.750000 -2.500000 0.000000 -1.750000 -2.250000 0.000000 -2.000000 -2.250000 0.000000 -1.500000 -2.500000 0.000000 -1.500000 -2.250000 0.000000 -1.000000 -2.500000 0.000000 -0.750000 -2.500000 0.000000 -0.750000 -2.250000 0.000000 -1.000000 -2.250000 0.000000 -0.500000 -2.500000 0.000000 -0.500000 -2.250000 0.000000 -1.750000 -2.000000 0.000000 -2.000000 -2.000000 0.000000 -1.500000 -2.000000 0.000000 -0.750000 -2.000000 0.000000 -1.000000 -2.000000 0.000000 -2.500000 -2.000000 0.000000 -2.250000 -2.000000 0.000000 -2.250000 -1.750000 0.000000 -2.500000 -1.750000 0.000000 -2.000000 -1.750000 0.000000 -1.250000 -2.000000 0.000000 -1.250000 -1.750000 0.000000 -1.500000 -1.750000 0.000000 -1.000000 -1.750000 0.000000 -2.250000 -1.500000 0.000000 -2.500000 -1.500000 0.000000 -2.000000 -1.500000 0.000000 -1.250000 -1.500000 0.000000 -1.500000 -1.500000 0.000000 -1.000000 -1.500000 0.000000 -1.750000 -1.500000 0.000000 -1.750000 -1.250000 0.000000 -2.000000 -1.250000 0.000000 -1.500000 -1.250000 0.000000 -0.750000 -1.500000 0.000000 -0.750000 -1.250000 0.000000 -1.000000 -1.250000 0.000000 -0.500000 -1.500000 0.000000 -0.500000 -1.250000 0.000000 -1.750000 -1.000000 0.000000 -2.000000 -1.000000 0.000000 -1.500000 -1.000000 0.000000 -0.750000 -1.000000 0.000000 -1.000000 -1.000000 0.000000 -0.500000 -1.000000 0.000000 -2.500000 -1.000000 0.000000 -2.250000 -1.000000 0.000000 -2.250000 -0.750000 0.000000 -2.500000 -0.750000 0.000000 -2.000000 -0.750000 0.000000 -1.250000 -1.000000 0.000000 -1.250000 -0.750000 0.000000 -1.500000 -0.750000 0.000000 -1.000000 -0.750000 0.000000 -0.250000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -0.750000 0.000000 -2.250000 -0.500000 0.000000 -2.500000 -0.500000 0.000000 -1.250000 -0.500000 0.000000 -1.500000 -0.500000 0.000000 -1.000000 -0.500000 0.000000 -0.500000 -0.750000 0.000000 -0.250000 -0.500000 0.000000 -0.500000 -0.500000 0.000000 -0.750000 -0.500000 0.000000 -0.500000 -0.250000 0.000000 -1.000000 -0.250000 0.000000 -0.750000 0.000000 0.000000 -1.000000 0.000000 0.000000 -0.500000 -2.000000 0.000000 -0.250000 -2.000000 0.000000 -0.250000 -1.750000 0.000000 -0.500000 -1.750000 0.000000 0.000000 -2.000000 0.000000 0.000000 -1.750000 0.000000 -0.250000 -1.500000 0.000000 0.000000 -1.500000 0.000000 -0.250000 -0.750000 0.000000 -2.000000 -0.500000 0.000000 0.000000 -0.500000 0.000000 -1.750000 -0.500000 0.000000 -1.750000 -0.250000 0.000000 -2.000000 -0.250000 0.000000 -1.500000 -0.250000 0.000000 -0.750000 -0.250000 0.000000 -1.750000 0.000000 0.000000 -2.000000 0.000000 0.000000 -1.500000 0.000000 0.000000 -0.500000 0.000000 0.000000 -0.500000 0.250000 0.000000 -0.250000 0.500000 0.000000 -0.500000 0.500000 0.000000 -1.000000 0.500000 0.000000 -0.750000 0.500000 0.000000 -0.750000 0.750000 0.000000 -1.000000 0.750000 0.000000 -1.750000 0.750000 0.000000 -1.500000 0.750000 0.000000 -1.500000 1.000000 0.000000 -1.750000 1.000000 0.000000 -0.750000 1.000000 0.000000 -1.000000 1.000000 0.000000 -0.500000 0.750000 0.000000 -0.500000 1.000000 0.000000 -2.500000 1.000000 0.000000 -2.250000 1.000000 0.000000 -2.250000 1.250000 0.000000 -2.500000 1.250000 0.000000 -2.000000 1.000000 0.000000 -2.000000 1.250000 0.000000 -1.250000 1.000000 0.000000 -1.250000 1.250000 0.000000 -1.500000 1.250000 0.000000 -1.000000 1.250000 0.000000 -2.250000 1.500000 0.000000 -2.500000 1.500000 0.000000 -2.000000 1.500000 0.000000 -1.250000 1.500000 0.000000 -1.500000 1.500000 0.000000 -1.000000 1.500000 0.000000 -1.750000 1.500000 0.000000 -1.750000 1.750000 0.000000 -2.000000 1.750000 0.000000 -1.500000 1.750000 0.000000 -0.750000 1.500000 0.000000 -0.750000 1.750000 0.000000 -1.000000 1.750000 0.000000 -1.750000 2.000000 0.000000 -2.000000 2.000000 0.000000 -1.500000 2.000000 0.000000 -2.500000 2.000000 0.000000 -2.250000 2.000000 0.000000 -2.250000 2.250000 0.000000 -2.500000 2.250000 0.000000 -2.000000 2.250000 0.000000 -1.250000 2.000000 0.000000 -1.250000 2.250000 0.000000 -1.500000 2.250000 0.000000 -1.000000 2.000000 0.000000 -1.000000 2.250000 0.000000 -2.250000 2.500000 0.000000 -2.500000 2.500000 0.000000 -2.000000 2.500000 0.000000 -1.250000 2.500000 0.000000 -1.500000 2.500000 0.000000 -1.000000 2.500000 0.000000 -2.500000 0.000000 0.000000 -2.250000 0.000000 0.000000 -2.250000 0.250000 0.000000 -2.500000 0.250000 0.000000 -2.000000 0.250000 0.000000 -1.250000 0.000000 0.000000 -1.250000 0.250000 0.000000 -1.500000 0.250000 0.000000 -1.000000 0.250000 0.000000 -0.250000 0.000000 0.000000 -0.250000 0.250000 0.000000 0.000000 0.000000 0.000000 0.000000 0.250000 0.000000 -2.250000 0.500000 0.000000 -2.500000 0.500000 0.000000 -2.000000 0.500000 0.000000 -1.250000 0.500000 0.000000 -1.500000 0.500000 0.000000 0.000000 0.500000 0.000000 -1.750000 0.500000 0.000000 -2.000000 0.750000 0.000000 -0.250000 1.000000 0.000000 -0.250000 1.250000 0.000000 -0.500000 1.250000 0.000000 0.000000 1.000000 0.000000 0.000000 1.250000 0.000000 -0.250000 1.500000 0.000000 -0.500000 1.500000 0.000000 0.000000 1.500000 0.000000 -0.500000 1.750000 0.000000 -0.750000 2.000000 0.000000 -0.500000 2.000000 0.000000 -0.250000 2.000000 0.000000 -0.250000 2.250000 0.000000 -0.500000 2.250000 0.000000 0.000000 2.000000 0.000000 0.000000 2.250000 0.000000 -0.250000 2.500000 0.000000 -0.500000 2.500000 0.000000 0.000000 2.500000 0.000000 1.000000 -2.500000 0.000000 1.250000 -2.500000 0.000000 1.250000 -2.250000 0.000000 1.000000 -2.250000 0.000000 1.500000 -2.500000 0.000000 1.500000 -2.250000 0.000000 2.000000 -2.500000 0.000000 2.250000 -2.500000 0.000000 2.250000 -2.250000 0.000000 2.000000 -2.250000 0.000000 2.500000 -2.500000 0.000000 2.500000 -2.250000 0.000000 1.250000 -2.000000 0.000000 1.000000 -2.000000 0.000000 1.500000 -2.000000 0.000000 2.250000 -2.000000 0.000000 2.000000 -2.000000 0.000000 2.500000 -2.000000 0.000000 1.750000 -2.000000 0.000000 1.750000 -1.750000 0.000000 1.500000 -1.750000 0.000000 2.000000 -1.750000 0.000000 0.750000 -1.750000 0.000000 1.000000 -1.750000 0.000000 1.000000 -1.500000 0.000000 0.750000 -1.500000 0.000000 1.750000 -1.500000 0.000000 1.500000 -1.500000 0.000000 2.000000 -1.500000 0.000000 1.250000 -1.500000 0.000000 1.250000 -1.250000 0.000000 1.000000 -1.250000 0.000000 1.500000 -1.250000 0.000000 2.250000 -1.500000 0.000000 2.250000 -1.250000 0.000000 2.000000 -1.250000 0.000000 2.500000 -1.500000 0.000000 2.500000 -1.250000 0.000000 1.250000 -1.000000 0.000000 1.000000 -1.000000 0.000000 1.500000 -1.000000 0.000000 2.250000 -1.000000 0.000000 2.000000 -1.000000 0.000000 2.500000 -1.000000 0.000000 0.500000 -1.000000 0.000000 0.750000 -1.000000 0.000000 0.750000 -0.750000 0.000000 0.500000 -0.750000 0.000000 1.000000 -0.750000 0.000000 1.750000 -1.000000 0.000000 1.750000 -0.750000 0.000000 1.500000 -0.750000 0.000000 1.000000 -0.500000 0.000000 0.750000 -0.500000 0.000000 0.250000 -0.500000 0.000000 0.500000 -0.500000 0.000000 0.500000 -0.250000 0.000000 0.000000 -2.500000 0.000000 0.250000 -2.500000 0.000000 0.250000 -2.250000 0.000000 0.000000 -2.250000 0.000000 0.500000 -2.500000 0.000000 0.500000 -2.250000 0.000000 0.250000 -2.000000 0.000000 0.500000 -2.000000 0.000000 0.750000 -2.000000 0.000000 0.500000 -1.750000 0.000000 0.500000 -1.500000 0.000000 0.250000 -1.500000 0.000000 0.250000 -1.250000 0.000000 0.000000 -1.250000 0.000000 0.500000 -1.250000 0.000000 0.250000 -1.000000 0.000000 2.000000 -0.750000 0.000000 1.750000 -0.500000 0.000000 1.500000 -0.500000 0.000000 2.000000 -0.500000 0.000000 0.250000 -0.250000 0.000000 0.000000 -0.250000 0.000000 1.250000 -0.500000 0.000000 1.250000 -0.250000 0.000000 1.000000 -0.250000 0.000000 1.500000 -0.250000 0.000000 2.250000 -0.500000 0.000000 2.250000 -0.250000 0.000000 2.000000 -0.250000 0.000000 2.500000 -0.500000 0.000000 2.500000 -0.250000 0.000000 0.250000 0.000000 0.000000 0.500000 0.000000 0.000000 1.250000 0.000000 0.000000 1.000000 0.000000 0.000000 1.500000 0.000000 0.000000 2.250000 0.000000 0.000000 2.000000 0.000000 0.000000 2.500000 0.000000 0.000000 0.750000 0.000000 0.000000 1.000000 0.250000 0.000000 0.500000 0.250000 0.000000 0.750000 0.500000 0.000000 0.500000 0.500000 0.000000 0.250000 0.500000 0.000000 0.500000 0.750000 0.000000 1.000000 0.500000 0.000000 1.250000 0.500000 0.000000 1.250000 0.750000 0.000000 1.000000 0.750000 0.000000 1.500000 0.500000 0.000000 1.500000 0.750000 0.000000 2.250000 0.500000 0.000000 2.500000 0.500000 0.000000 2.500000 0.750000 0.000000 2.250000 0.750000 0.000000 0.000000 0.750000 0.000000 0.250000 1.000000 0.000000 1.250000 1.000000 0.000000 1.000000 1.000000 0.000000 1.500000 1.000000 0.000000 2.000000 0.750000 0.000000 2.250000 1.000000 0.000000 2.000000 1.000000 0.000000 2.500000 1.000000 0.000000 0.500000 1.000000 0.000000 0.750000 1.000000 0.000000 0.750000 1.250000 0.000000 0.500000 1.250000 0.000000 1.000000 1.250000 0.000000 1.750000 1.000000 0.000000 1.750000 1.250000 0.000000 1.500000 1.250000 0.000000 2.000000 1.250000 0.000000 0.750000 1.500000 0.000000 0.500000 1.500000 0.000000 1.000000 1.500000 0.000000 1.750000 1.500000 0.000000 1.500000 1.500000 0.000000 2.000000 1.500000 0.000000 1.250000 1.500000 0.000000 1.250000 1.750000 0.000000 1.000000 1.750000 0.000000 1.500000 1.750000 0.000000 2.250000 1.500000 0.000000 2.250000 1.750000 0.000000 2.000000 1.750000 0.000000 2.500000 1.500000 0.000000 2.500000 1.750000 0.000000 1.250000 2.000000 0.000000 1.000000 2.000000 0.000000 1.500000 2.000000 0.000000 2.250000 2.000000 0.000000 2.000000 2.000000 0.000000 2.500000 2.000000 0.000000 0.750000 2.000000 0.000000 1.000000 2.250000 0.000000 0.750000 2.250000 0.000000 1.750000 2.000000 0.000000 1.750000 2.250000 0.000000 1.500000 2.250000 0.000000 2.000000 2.250000 0.000000 0.500000 2.250000 0.000000 0.750000 2.500000 0.000000 0.500000 2.500000 0.000000 1.000000 2.500000 0.000000 1.750000 2.500000 0.000000 1.500000 2.500000 0.000000 2.000000 2.500000 0.000000 0.750000 0.250000 0.000000 1.750000 0.000000 0.000000 1.750000 0.250000 0.000000 1.500000 0.250000 0.000000 2.000000 0.250000 0.000000 1.750000 0.500000 0.000000 2.000000 0.500000 0.000000 0.250000 0.750000 0.000000 0.250000 1.500000 0.000000 0.250000 1.750000 0.000000 0.000000 1.750000 0.000000 0.500000 1.750000 0.000000 0.250000 2.000000 0.000000 0.500000 2.000000</vertices>
+                        <indices>0 1 2 0 2 3 1 4 5 1 5 2 6 7 8 6 8 9 7 10 11 7 11 8 3 2 12 3 12 13 2 5 14 2 14 12 9 8 15 9 15 16 17 18 19 17 19 20 18 13 21 18 21 19 14 22 23 14 23 24 22 16 25 22 25 23 20 19 26 20 26 27 19 21 28 19 28 26 24 23 29 24 29 30 23 25 31 23 31 29 28 32 33 28 33 34 32 30 35 32 35 33 31 36 37 31 37 38 36 39 40 36 40 37 34 33 41 34 41 42 33 35 43 33 43 41 38 37 44 38 44 45 37 40 46 37 46 44 47 48 49 47 49 50 48 42 51 48 51 49 43 52 53 43 53 54 52 45 55 52 55 53 56 57 58 50 49 59 50 59 60 54 53 61 54 61 62 53 55 63 53 63 61 64 65 66 67 66 68 69 70 71 8 11 72 8 72 15 72 73 74 72 74 75 73 76 77 73 77 74 75 74 78 75 78 39 74 77 79 74 79 78 46 56 80 46 80 64 56 58 80 49 51 81 49 81 59 64 80 65 80 58 82 80 82 65 81 83 84 81 84 85 83 62 86 83 86 84 63 67 87 63 87 69 67 68 87 85 84 88 85 88 89 84 86 90 84 90 88 69 87 70 87 68 91 87 91 70 92 93 94 95 96 97 95 97 98 99 100 101 99 101 102 98 97 103 98 103 104 97 105 106 97 106 103 107 108 109 107 109 110 108 111 112 108 112 109 101 113 114 101 114 115 113 104 116 113 116 114 110 109 117 110 117 118 109 112 119 109 119 117 115 114 120 115 120 121 114 116 122 114 122 120 119 123 124 119 124 125 123 121 126 123 126 124 122 127 128 122 128 129 125 124 130 125 130 131 124 126 132 124 132 130 133 134 135 133 135 136 134 131 137 134 137 135 132 138 139 132 139 140 138 141 142 138 142 139 136 135 143 136 143 144 135 137 145 135 145 143 140 139 146 140 146 147 139 142 148 139 148 146 149 150 151 149 151 152 150 89 153 150 153 151 90 154 155 90 155 156 154 71 157 154 157 155 91 158 159 91 159 92 158 160 161 158 161 159 152 151 162 152 162 163 151 153 164 151 164 162 156 155 165 156 165 166 155 157 95 155 95 165 92 159 93 159 161 167 159 167 93 164 168 99 164 99 169 168 166 100 168 100 99 96 94 105 96 105 97 169 99 102 169 102 111 106 170 171 106 171 172 170 173 174 170 174 171 172 171 175 172 175 176 171 174 177 171 177 175 127 176 178 127 178 128 129 128 179 129 179 141 128 178 180 128 180 179 180 181 182 180 182 183 181 184 185 181 185 182 183 182 186 183 186 187 182 185 188 182 188 186 189 190 191 189 191 192 190 193 194 190 194 191 195 196 197 195 197 198 196 199 200 196 200 197 192 191 201 192 201 202 191 194 203 191 203 201 198 197 204 198 204 205 197 200 206 197 206 204 203 207 208 203 208 209 207 205 210 207 210 208 211 212 213 211 213 214 209 208 215 209 215 216 208 210 217 208 217 215 213 218 219 213 219 220 218 216 221 218 221 219 217 222 223 217 223 224 222 225 226 222 226 223 220 219 227 220 227 228 219 221 229 219 229 227 224 223 230 224 230 231 223 226 232 223 232 230 233 234 235 233 235 236 234 228 237 234 237 235 229 238 239 229 239 240 235 237 241 235 241 242 243 244 245 246 247 248 246 248 249 247 250 251 247 251 248 249 248 252 249 252 76 248 251 253 248 253 252 253 254 211 253 211 255 254 202 212 254 212 211 255 211 214 255 214 256 79 257 258 79 258 259 257 256 260 257 260 258 259 258 261 259 261 57 258 260 233 258 233 261 238 231 262 238 262 239 236 235 242 236 242 244 240 239 263 240 263 264 239 262 265 239 265 263 82 243 266 82 266 267 243 245 266 241 268 269 241 269 270 268 264 271 268 271 269 265 272 273 265 273 274 272 275 276 272 276 273 267 266 277 267 277 160 266 245 278 266 278 277 270 269 279 270 279 280 269 271 281 269 281 279 274 273 282 274 282 283 273 276 284 273 284 282 285 280 286 287 288 289 290 289 291 292 293 294 292 294 295 293 296 297 293 297 294 298 299 300 298 300 301 302 303 173 295 294 304 295 304 305 294 297 306 294 306 304 307 301 308 307 308 309 301 300 310 301 310 308 311 312 313 311 313 314 312 305 315 312 315 313 306 316 317 306 317 318 316 309 319 316 319 317 314 313 320 314 320 321 313 315 322 313 322 320 318 317 323 318 323 324 317 319 325 317 325 323 322 326 327 322 327 328 326 324 329 326 329 327 325 330 331 325 331 332 330 333 334 330 334 331 328 327 335 328 335 336 327 329 337 327 337 335 332 331 338 332 338 339 331 334 340 331 340 338 341 336 342 341 342 343 337 344 345 337 345 346 344 339 347 344 347 345 348 343 349 348 349 350 343 342 351 343 351 349 346 345 352 346 352 353 345 347 354 345 354 352 278 285 355 278 355 287 285 286 355 281 356 357 281 357 358 356 283 359 356 359 357 287 355 288 355 286 292 355 292 288 358 357 360 358 360 296 357 359 361 357 361 360 167 290 362 167 362 302 290 291 362 361 298 301 361 301 307 302 362 303 362 291 311 362 311 303 177 363 364 177 364 365 363 321 366 363 366 364 365 364 367 365 367 184 364 366 368 364 368 367 368 341 343 368 343 348</indices>
+                        <localFrame>
+                            <position>0.000000 0.000000 0.000000</position>
+                            <euler>-90.000000 0.000000 -90.000000</euler>
+                        </localFrame>
+                        <shadingAngle>20.000000</shadingAngle>
+                        <culling>true</culling>
+                        <wireframe>false</wireframe>
+                        <color>
+                            <ambientDiffuse>240 240 240</ambientDiffuse>
+                            <specular>25 25 25</specular>
+                            <emission>0 0 0</emission>
+                        </color>
+                    </mesh>
+                    <mesh>
+                        <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                        <vertices>0.000000 -2.500002 -2.500002 0.000000 2.500002 -2.500002 0.000000 2.500002 2.500002 0.000000 -2.500002 2.500002</vertices>
+                        <indices>0 1 2 0 2 3</indices>
+                        <localFrame>
+                            <position>0.000000 0.000000 0.000000</position>
+                            <euler>-90.000000 0.000000 -90.000000</euler>
+                        </localFrame>
+                        <shadingAngle>20.000000</shadingAngle>
+                        <culling>false</culling>
+                        <wireframe>true</wireframe>
+                        <color>
+                            <ambientDiffuse>0 0 0</ambientDiffuse>
+                            <specular>0 0 0</specular>
+                            <emission>0 0 0</emission>
+                        </color>
+                    </mesh>
+                    <mesh>
+                        <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                        <vertices>0.000000 -2.500001 2.500001 0.000000 -2.500001 2.250001 0.000000 -2.250001 2.250001 0.000000 -2.250001 2.500001 0.000000 -2.250001 2.000001 0.000000 -2.000001 2.250001 0.000000 -2.000001 2.500001 0.000000 -2.000001 2.000001 0.000000 -2.500001 2.000001 0.000000 -2.500001 1.500001 0.000000 -2.500001 1.250001 0.000000 -2.250001 1.250001 0.000000 -2.250001 1.500001 0.000000 -2.500001 1.000000 0.000000 -2.250001 1.000000 0.000000 -2.000001 1.250001 0.000000 -2.000001 1.000000 0.000000 -2.000001 1.500001 0.000000 -2.500001 0.500000 0.000000 -2.500001 0.250000 0.000000 -2.250001 0.250000 0.000000 -2.250001 0.500000 0.000000 -2.500001 0.000000 0.000000 -2.250001 0.000000 0.000000 -2.000001 0.250000 0.000000 -2.000001 0.500000 0.000000 -2.000001 0.000000 0.000000 -2.500001 -0.500000 0.000000 -2.500001 -0.750000 0.000000 -2.250001 -0.750000 0.000000 -2.250001 -0.500000 0.000000 -2.500001 -1.000000 0.000000 -2.250001 -1.000000 0.000000 -2.000001 -0.750000 0.000000 -2.000001 -0.500000 0.000000 -2.000001 -1.000000 0.000000 -2.500001 -1.500001 0.000000 -2.500001 -1.750001 0.000000 -2.250001 -1.750001 0.000000 -2.250001 -1.500001 0.000000 -2.500001 -2.000001 0.000000 -2.250001 -2.000001 0.000000 -2.000001 -1.750001 0.000000 -2.000001 -1.500001 0.000000 -2.000001 -2.000001 0.000000 -2.000001 -2.250001 0.000000 -1.750001 -2.250001 0.000000 -1.750001 -2.000001 0.000000 -2.000001 -2.500001 0.000000 -1.750001 -2.500001 0.000000 -1.500001 -2.250001 0.000000 -1.500001 -2.000001 0.000000 -1.500001 -2.500001 0.000000 -2.000001 -1.250001 0.000000 -1.750001 -1.250000 0.000000 -1.750001 -1.000000 0.000000 -1.750001 -1.500001 0.000000 -1.500001 -1.250001 0.000000 -1.500001 -1.000000 0.000000 -1.500001 -1.500001 0.000000 -2.000001 -0.250000 0.000000 -1.750001 -0.250000 0.000000 -1.750001 0.000000 0.000000 -1.750001 -0.500000 0.000000 -1.500001 -0.250000 0.000000 -1.500001 0.000000 0.000000 -1.500001 -0.500000 0.000000 -2.000001 0.750000 0.000000 -1.750001 0.750000 0.000000 -1.750001 1.000000 0.000000 -1.750001 0.500000 0.000000 -1.500001 0.750000 0.000000 -1.500001 1.000000 0.000000 -1.500001 0.500000 0.000000 -2.000001 1.750001 0.000000 -1.750001 1.750001 0.000000 -1.750001 2.000001 0.000000 -1.750001 1.500001 0.000000 -1.500001 1.750001 0.000000 -1.500001 2.000001 0.000000 -1.500001 1.500001 0.000000 -1.500001 2.500001 0.000000 -1.500001 2.250001 0.000000 -1.250001 2.250001 0.000000 -1.250001 2.500001 0.000000 -1.250000 2.000001 0.000000 -1.000000 2.250001 0.000000 -1.000000 2.500001 0.000000 -1.000000 2.000001 0.000000 -1.500001 1.250001 0.000000 -1.250001 1.250001 0.000000 -1.250001 1.500001 0.000000 -1.250001 1.000000 0.000000 -1.000000 1.250001 0.000000 -1.000000 1.500001 0.000000 -1.000000 1.000000 0.000000 -1.500001 0.250000 0.000000 -1.250001 0.250000 0.000000 -1.250001 0.500000 0.000000 -1.250001 0.000000 0.000000 -1.000000 0.250000 0.000000 -1.000000 0.500000 0.000000 -1.000000 0.000000 0.000000 -1.500001 -0.750000 0.000000 -1.250001 -0.750000 0.000000 -1.250001 -0.500000 0.000000 -1.250001 -1.000000 0.000000 -1.000000 -0.750000 0.000000 -1.000000 -0.500000 0.000000 -1.000000 -1.000000 0.000000 -1.500001 -1.750001 0.000000 -1.250000 -1.750001 0.000000 -1.250001 -1.500001 0.000000 -1.250001 -2.000001 0.000000 -1.000000 -1.750001 0.000000 -1.000000 -1.500001 0.000000 -1.000000 -2.000001 0.000000 -1.000000 -2.250001 0.000000 -0.750000 -2.250001 0.000000 -0.750000 -2.000001 0.000000 -1.000000 -2.500001 0.000000 -0.750000 -2.500001 0.000000 -0.500000 -2.250001 0.000000 -0.500000 -2.000001 0.000000 -0.500000 -2.500001 0.000000 -1.000000 -1.250001 0.000000 -0.750000 -1.250001 0.000000 -0.750000 -1.000000 0.000000 -0.750000 -1.500001 0.000000 -0.500000 -1.250001 0.000000 -0.500000 -1.000000 0.000000 -0.500000 -1.500001 0.000000 -1.000000 -0.250000 0.000000 -0.750000 -0.250000 0.000000 -0.750000 0.000000 0.000000 -0.750000 -0.500000 0.000000 -0.500000 -0.250000 0.000000 -0.500000 0.000000 0.000000 -0.500000 -0.500000 0.000000 -1.000000 0.750000 0.000000 -0.750000 0.750000 0.000000 -0.750000 1.000000 0.000000 -0.750000 0.500000 0.000000 -0.500000 0.750000 0.000000 -0.500000 1.000000 0.000000 -0.500000 0.500000 0.000000 -1.000000 1.750001 0.000000 -0.750000 1.750001 0.000000 -0.750000 2.000001 0.000000 -0.750000 1.500001 0.000000 -0.500000 1.750001 0.000000 -0.500000 2.000001 0.000000 -0.500000 1.500001 0.000000 -0.500000 2.500001 0.000000 -0.500000 2.250001 0.000000 -0.250000 2.250001 0.000000 -0.250000 2.500001 0.000000 -0.250000 2.000001 0.000000 0.000000 2.250001 0.000000 0.000000 2.500001 0.000000 0.000000 2.000001 0.000000 -0.500000 1.250001 0.000000 -0.250000 1.250001 0.000000 -0.250000 1.500001 0.000000 -0.250000 1.000000 0.000000 0.000000 1.250001 0.000000 0.000000 1.500001 0.000000 0.000000 1.000000 0.000000 -0.500000 0.250000 0.000000 -0.250000 0.250000 0.000000 -0.250000 0.500000 0.000000 -0.250000 0.000000 0.000000 0.000000 0.250000 0.000000 0.000000 0.500000 0.000000 0.000000 0.000000 0.000000 -0.500000 -0.750000 0.000000 -0.250000 -0.750000 0.000000 -0.250000 -0.500000 0.000000 -0.250000 -1.000000 0.000000 0.000000 -0.750000 0.000000 0.000000 -0.500000 0.000000 0.000000 -1.000000 0.000000 -0.500000 -1.750001 0.000000 -0.250000 -1.750001 0.000000 -0.250000 -1.500001 0.000000 -0.250000 -2.000001 0.000000 0.000000 -1.750001 0.000000 0.000000 -1.500001 0.000000 0.000000 -2.000001 0.000000 0.000000 -2.250001 0.000000 0.250000 -2.250001 0.000000 0.250000 -2.000001 0.000000 0.000000 -2.500001 0.000000 0.250000 -2.500001 0.000000 0.500000 -2.250001 0.000000 0.500000 -2.000001 0.000000 0.500000 -2.500001 0.000000 0.000000 -1.250001 0.000000 0.250000 -1.500001 0.000000 0.250000 -1.250001 0.000000 0.250000 -1.000000 0.000000 0.500000 -1.250001 0.000000 0.500000 -1.000000 0.000000 0.500000 -1.500001 0.000000 0.000000 -0.250000 0.000000 0.250000 -0.250000 0.000000 0.250000 0.000000 0.000000 0.250000 -0.500000 0.000000 0.500000 -0.250000 0.000000 0.500000 0.000000 0.000000 0.500000 -0.500000 0.000000 0.000000 0.750000 0.000000 0.250000 0.750000 0.000000 0.250000 1.000000 0.000000 0.250000 0.500000 0.000000 0.500000 0.750000 0.000000 0.500000 1.000000 0.000000 0.500000 0.500000 0.000000 0.000000 1.750001 0.000000 0.250000 1.750001 0.000000 0.250000 2.000001 0.000000 0.250000 1.500001 0.000000 0.500000 1.750001 0.000000 0.500000 2.000001 0.000000 0.500000 1.500001 0.000000 0.500000 2.500001 0.000000 0.500000 2.250001 0.000000 0.750000 2.250001 0.000000 0.750000 2.500001 0.000000 0.750000 2.000001 0.000000 1.000000 2.250001 0.000000 1.000000 2.500001 0.000000 1.000000 2.000001 0.000000 0.500000 1.250001 0.000000 0.750000 1.250001 0.000000 0.750000 1.500001 0.000000 0.750000 1.000000 0.000000 1.000000 1.250001 0.000000 1.000000 1.500001 0.000000 1.000000 1.000000 0.000000 0.500000 0.250000 0.000000 0.750000 0.250000 0.000000 0.750000 0.500000 0.000000 0.750000 0.000000 0.000000 1.000000 0.250000 0.000000 1.000000 0.500000 0.000000 1.000000 0.000000 0.000000 0.500000 -0.750000 0.000000 0.750000 -0.750000 0.000000 0.750000 -0.500000 0.000000 0.750000 -1.000000 0.000000 1.000000 -0.750000 0.000000 1.000000 -0.500000 0.000000 1.000000 -1.000000 0.000000 0.500000 -1.750001 0.000000 0.750000 -1.750001 0.000000 0.750000 -1.500001 0.000000 0.750000 -2.000001 0.000000 1.000000 -1.750001 0.000000 1.000000 -1.500001 0.000000 1.000000 -2.000001 0.000000 1.000000 -2.250001 0.000000 1.250001 -2.250001 0.000000 1.250000 -2.000001 0.000000 1.000000 -2.500001 0.000000 1.250001 -2.500001 0.000000 1.500001 -2.250001 0.000000 1.500001 -2.000001 0.000000 1.500001 -2.500001 0.000000 1.000000 -1.250001 0.000000 1.250001 -1.250001 0.000000 1.250001 -1.000000 0.000000 1.250001 -1.500001 0.000000 1.500001 -1.250001 0.000000 1.500001 -1.000000 0.000000 1.500001 -1.500001 0.000000 1.000000 -0.250000 0.000000 1.250001 -0.250000 0.000000 1.250001 0.000000 0.000000 1.250001 -0.500000 0.000000 1.500001 -0.250000 0.000000 1.500001 0.000000 0.000000 1.500001 -0.500000 0.000000 1.000000 0.750000 0.000000 1.250001 0.750000 0.000000 1.250001 1.000000 0.000000 1.250001 0.500000 0.000000 1.500001 0.750000 0.000000 1.500001 1.000000 0.000000 1.500001 0.500000 0.000000 1.000000 1.750001 0.000000 1.250000 1.750001 0.000000 1.250001 2.000001 0.000000 1.250001 1.500001 0.000000 1.500001 1.750001 0.000000 1.500001 2.000001 0.000000 1.500001 1.500001 0.000000 1.500001 2.500001 0.000000 1.500001 2.250001 0.000000 1.750001 2.250001 0.000000 1.750001 2.500001 0.000000 1.750001 2.000001 0.000000 2.000001 2.250001 0.000000 2.000001 2.500001 0.000000 2.000001 2.000001 0.000000 1.500001 1.250001 0.000000 1.750001 1.250000 0.000000 1.750001 1.500001 0.000000 1.750001 1.000000 0.000000 2.000001 1.250001 0.000000 2.000001 1.500001 0.000000 2.000001 1.000000 0.000000 1.500001 0.250000 0.000000 1.750001 0.250000 0.000000 1.750001 0.500000 0.000000 1.750001 0.000000 0.000000 2.000001 0.250000 0.000000 2.000001 0.500000 0.000000 2.000001 0.000000 0.000000 1.500001 -0.750000 0.000000 1.750001 -0.750000 0.000000 1.750001 -0.500000 0.000000 1.750001 -1.000000 0.000000 2.000001 -0.750000 0.000000 2.000001 -0.500000 0.000000 2.000001 -1.000000 0.000000 1.500001 -1.750001 0.000000 1.750001 -1.750001 0.000000 1.750001 -1.500001 0.000000 1.750001 -2.000001 0.000000 2.000001 -1.750001 0.000000 2.000001 -1.500001 0.000000 2.000001 -2.000001 0.000000 2.000001 -2.250001 0.000000 2.250001 -2.250001 0.000000 2.250001 -2.000001 0.000000 2.000001 -2.500001 0.000000 2.250001 -2.500001 0.000000 2.500001 -2.250001 0.000000 2.500001 -2.000001 0.000000 2.500001 -2.500001 0.000000 2.000001 -1.250001 0.000000 2.250001 -1.250001 0.000000 2.250001 -1.000000 0.000000 2.250001 -1.500001 0.000000 2.500001 -1.250001 0.000000 2.500001 -1.000000 0.000000 2.500001 -1.500001 0.000000 2.000001 -0.250000 0.000000 2.250001 -0.250000 0.000000 2.250001 0.000000 0.000000 2.250001 -0.500000 0.000000 2.500001 -0.250000 0.000000 2.500001 0.000000 0.000000 2.500001 -0.500000 0.000000 2.000001 0.750000 0.000000 2.250001 0.750000 0.000000 2.250001 1.000000 0.000000 2.250001 0.500000 0.000000 2.500001 0.750000 0.000000 2.500001 1.000000 0.000000 2.500001 0.500000 0.000000 2.000001 1.750001 0.000000 2.250001 1.750001 0.000000 2.250001 2.000001 0.000000 2.250001 1.500001 0.000000 2.500001 1.750001 0.000000 2.500001 2.000001 0.000000 2.500001 1.500001</vertices>
+                        <indices>0 1 2 0 2 3 1 4 2 3 2 5 3 5 6 2 4 7 2 7 5 1 8 4 9 10 11 9 11 12 10 13 14 10 14 11 12 11 15 11 14 16 11 16 15 12 15 17 18 19 20 18 20 21 19 22 23 19 23 20 21 20 24 21 24 25 20 23 26 20 26 24 27 28 29 27 29 30 28 31 32 28 32 29 30 29 33 30 33 34 29 32 35 29 35 33 36 37 38 36 38 39 37 40 41 37 41 38 39 38 42 39 42 43 38 41 44 38 44 42 44 45 46 44 46 47 45 48 49 45 49 46 47 46 50 47 50 51 46 49 52 46 52 50 35 53 54 35 54 55 53 43 56 53 56 54 55 54 57 55 57 58 54 56 59 54 59 57 26 60 61 26 61 62 60 34 63 60 63 61 62 61 64 62 64 65 61 63 66 61 66 64 16 67 68 16 68 69 67 25 70 67 70 68 69 68 71 69 71 72 68 70 73 68 73 71 7 74 75 7 75 76 74 17 77 74 77 75 76 75 78 76 78 79 75 77 80 75 80 78 81 82 83 81 83 84 82 79 85 82 85 83 84 83 86 84 86 87 83 85 88 83 88 86 80 89 90 80 90 91 89 72 92 89 92 90 91 90 93 91 93 94 90 92 95 90 95 93 73 96 97 73 97 98 96 65 99 96 99 97 98 97 100 98 100 101 97 99 102 97 102 100 66 103 104 66 104 105 103 58 106 103 106 104 105 104 107 105 107 108 104 106 109 104 109 107 59 110 111 59 111 112 110 51 113 110 113 111 112 111 114 112 114 115 111 113 116 111 116 114 116 117 118 116 118 119 117 120 121 117 121 118 119 118 122 119 122 123 118 121 124 118 124 122 109 125 126 109 126 127 125 115 128 125 128 126 127 126 129 127 129 130 126 128 131 126 131 129 102 132 133 102 133 134 132 108 135 132 135 133 134 133 136 134 136 137 133 135 138 133 138 136 95 139 140 95 140 141 139 101 142 139 142 140 141 140 143 141 143 144 140 142 145 140 145 143 88 146 147 88 147 148 146 94 149 146 149 147 148 147 150 148 150 151 147 149 152 147 152 150 153 154 155 153 155 156 154 151 157 154 157 155 156 155 158 156 158 159 155 157 160 155 160 158 152 161 162 152 162 163 161 144 164 161 164 162 163 162 165 163 165 166 162 164 167 162 167 165 145 168 169 145 169 170 168 137 171 168 171 169 170 169 172 170 172 173 169 171 174 169 174 172 138 175 176 138 176 177 175 130 178 175 178 176 177 176 179 177 179 180 176 178 181 176 181 179 131 182 183 131 183 184 182 123 185 182 185 183 184 183 186 184 186 187 183 185 188 183 188 186 188 189 190 188 190 191 189 192 193 189 193 190 191 190 194 191 194 195 190 193 196 190 196 194 197 187 198 181 197 199 181 199 200 197 198 199 200 199 201 200 201 202 199 198 203 199 203 201 174 204 205 174 205 206 204 180 207 204 207 205 206 205 208 206 208 209 205 207 210 205 210 208 167 211 212 167 212 213 211 173 214 211 214 212 213 212 215 213 215 216 212 214 217 212 217 215 160 218 219 160 219 220 218 166 221 218 221 219 220 219 222 220 222 223 219 221 224 219 224 222 225 226 227 225 227 228 226 223 229 226 229 227 228 227 230 228 230 231 227 229 232 227 232 230 224 233 234 224 234 235 233 216 236 233 236 234 235 234 237 235 237 238 234 236 239 234 239 237 217 240 241 217 241 242 240 209 243 240 243 241 242 241 244 242 244 245 241 243 246 241 246 244 210 247 248 210 248 249 247 202 250 247 250 248 249 248 251 249 251 252 248 250 253 248 253 251 203 254 255 203 255 256 254 195 257 254 257 255 256 255 258 256 258 259 255 257 260 255 260 258 260 261 262 260 262 263 261 264 265 261 265 262 263 262 266 263 266 267 262 265 268 262 268 266 253 269 270 253 270 271 269 259 272 269 272 270 271 270 273 271 273 274 270 272 275 270 275 273 246 276 277 246 277 278 276 252 279 276 279 277 278 277 280 278 280 281 277 279 282 277 282 280 239 283 284 239 284 285 283 245 286 283 286 284 285 284 287 285 287 288 284 286 289 284 289 287 232 290 291 232 291 292 290 238 293 290 293 291 292 291 294 292 294 295 291 293 296 291 296 294 297 298 299 297 299 300 298 295 301 298 301 299 300 299 302 300 302 303 299 301 304 299 304 302 296 305 306 296 306 307 305 288 308 305 308 306 307 306 309 307 309 310 306 308 311 306 311 309 289 312 313 289 313 314 312 281 315 312 315 313 314 313 316 314 316 317 313 315 318 313 318 316 282 319 320 282 320 321 319 274 322 319 322 320 321 320 323 321 323 324 320 322 325 320 325 323 275 326 327 275 327 328 326 267 329 326 329 327 328 327 330 328 330 331 327 329 332 327 332 330 332 333 334 332 334 335 333 336 337 333 337 334 335 334 338 335 338 339 334 337 340 334 340 338 325 341 342 325 342 343 341 331 344 341 344 342 343 342 345 343 345 346 342 344 347 342 347 345 318 348 349 318 349 350 348 324 351 348 351 349 350 349 352 350 352 353 349 351 354 349 354 352 311 355 356 311 356 357 355 317 358 355 358 356 357 356 359 357 359 360 356 358 361 356 361 359 304 362 363 304 363 364 362 310 365 362 365 363 364 363 366 364 366 367 363 365 368 363 368 366</indices>
+                        <localFrame>
+                            <position>0.000000 0.000000 0.000000</position>
+                            <euler>0.000000 -90.000000 0.000000</euler>
+                        </localFrame>
+                        <shadingAngle>20.000000</shadingAngle>
+                        <culling>true</culling>
+                        <wireframe>false</wireframe>
+                        <color>
+                            <ambientDiffuse>222 222 222</ambientDiffuse>
+                            <specular>25 25 25</specular>
+                            <emission>0 0 0</emission>
+                        </color>
+                    </mesh>
+                </compound>
+                <dynamics>
+                    <respondableMask>65535</respondableMask>
+                    <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+                    <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+                    <mass>5025.000000</mass>
+                    <localInertiaFrame>
+                        <position>0.000000 0.000000 0.000000</position>
+                        <euler>-0.000000 0.000000 -0.000000</euler>
+                    </localInertiaFrame>
+                    <principalMomentOfInertia>0.011360 0.011360 0.021725</principalMomentOfInertia>
+                    <switches>
+                        <static>true</static>
+                        <respondable>false</respondable>
+                        <startSleeping>false</startSleeping>
+                        <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+                    </switches>
+                    <material>
+                        <engines>
+                            <bullet>
+                                <restitution>0.500000</restitution>
+                                <friction>0.500000</friction>
+                                <oldfriction>0.500000</oldfriction>
+                                <lineardamping>0.000000</lineardamping>
+                                <angulardamping>0.000000</angulardamping>
+                                <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                                <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                                <sticky>false</sticky>
+                                <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                                <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                                <autoshrinkconvex>false</autoshrinkconvex>
+                            </bullet>
+                            <ode>
+                                <friction>0.500000</friction>
+                                <softerp>0.200000</softerp>
+                                <softcfm>0.000000</softcfm>
+                                <lineardamping>0.000000</lineardamping>
+                                <angulardamping>0.000000</angulardamping>
+                                <maxcontacts>64</maxcontacts>
+                            </ode>
+                            <vortex>
+                                <primlinearaxisfriction>0.500000</primlinearaxisfriction>
+                                <seclinearaxisfriction>0.500000</seclinearaxisfriction>
+                                <primangularaxisfriction>0.000000</primangularaxisfriction>
+                                <secangularaxisfriction>0.000000</secangularaxisfriction>
+                                <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                                <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                                <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                                <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                                <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                                <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                                <compliance>0.000000</compliance>
+                                <damping>10000000.000000</damping>
+                                <restitution>0.000000</restitution>
+                                <restitutionthreshold>0.500000</restitutionthreshold>
+                                <adhesiveforce>0.000000</adhesiveforce>
+                                <linearvelocitydamping>0.000000</linearvelocitydamping>
+                                <angularvelocitydamping>0.000000</angularvelocitydamping>
+                                <primlinearaxisslide>0.000000</primlinearaxisslide>
+                                <seclinearaxisslide>0.000000</seclinearaxisslide>
+                                <primangularaxisslide>0.000000</primangularaxisslide>
+                                <secangularaxisslide>0.000000</secangularaxisslide>
+                                <normalangularaxisslide>0.000000</normalangularaxisslide>
+                                <primlinearaxisslip>0.000000</primlinearaxisslip>
+                                <seclinearaxisslip>0.000000</seclinearaxisslip>
+                                <primangularaxisslip>0.000000</primangularaxisslip>
+                                <secangularaxisslip>0.000000</secangularaxisslip>
+                                <normalangularaxisslip>0.000000</normalangularaxisslip>
+                                <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                                <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                                <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                                <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                                <skinthickness>0.000000</skinthickness>
+                                <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                                <primaxisvectorx>0.000000</primaxisvectorx>
+                                <primaxisvectory>0.000000</primaxisvectory>
+                                <primaxisvectorz>1.000000</primaxisvectorz>
+                                <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                                <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                                <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                                <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                                <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                                <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                                <materialuniqueid>38</materialuniqueid>
+                                <pureshapesasconvex>false</pureshapesasconvex>
+                                <convexshapesasrandom>false</convexshapesasrandom>
+                                <randomshapesasterrain>false</randomshapesasterrain>
+                                <fastmoving>true</fastmoving>
+                                <autoslip>false</autoslip>
+                                <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                                <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                                <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                                <autoangulardamping>false</autoangulardamping>
+                            </vortex>
+                            <newton>
+                                <staticfriction>0.500000</staticfriction>
+                                <kineticfriction>0.500000</kineticfriction>
+                                <restitution>0.000000</restitution>
+                                <lineardrag>0.000000</lineardrag>
+                                <angulardrag>0.000000</angulardrag>
+                                <fastmoving>false</fastmoving>
+                            </newton>
+                        </engines>
+                    </material>
+                </dynamics>
+            </shape>
+        </shape>
+    </dummy>
+    <dummy>
+        <common>
+            <name>DefaultLights</name>
+            <altName>DefaultLights</altName>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <canUpdateDna>true</canUpdateDna>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <renderable>false</renderable>
+                <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notRenderable>false</notRenderable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+            </localModelProperty>
+            <layer>1024</layer>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <size>0.010000</size>
+        <linkedDummy></linkedDummy>
+        <!-- 'linkType' tag: can be 'dynamics_loopClosure', 'dynamics_forceConstraint' or 'ik_tipTarget' -->
+        <linkType>ik_tipTarget</linkType>
+        <color>
+            <object>255 204 140</object>
+        </color>
+        <light>
+            <common>
+                <name>DefaultLightA</name>
+                <altName>DefaultLightA</altName>
+                <localFrame>
+                    <position>1.553546 -0.839107 2.500000</position>
+                    <euler>-138.226349 -50.966072 117.469948</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <name>DefaultLightB</name>
+                <altName>DefaultLightB</altName>
+                <localFrame>
+                    <position>-0.182812 1.843093 2.500000</position>
+                    <euler>112.268143 5.244510 19.218817</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <name>DefaultLightC</name>
+                <altName>DefaultLightC</altName>
+                <localFrame>
+                    <position>-1.150916 -1.217711 2.500000</position>
+                    <euler>-131.885895 35.131718 -127.483414</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <name>DefaultLightD</name>
+                <altName>DefaultLightD</altName>
+                <localFrame>
+                    <position>0.000000 0.000000 2.500000</position>
+                    <euler>-179.999969 0.000000 0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <canUpdateDna>false</canUpdateDna>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <renderable>false</renderable>
+                    <!-- following 5 can be set at the same time with the 'detectable' tag-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notRenderable>false</notRenderable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                </localModelProperty>
+                <layer>4096</layer>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>51 51 51</ambientDiffuse>
+                    <specular>91 91 91</specular>
+                </light>
+            </color>
+        </light>
+    </dummy>
+</CoppeliaSim>

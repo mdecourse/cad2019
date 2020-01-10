@@ -1,0 +1,204 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 電腦輔助設計實習課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 電腦輔助設計實習課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 電腦輔助設計實習課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='CAD Process.html'>CAD Process</a><li><a href='Evaluation.html'>Evaluation</a><li><a href='課程表單.html'>課程表單</a><li class='has-children'><a href='Theories.html'>Theories</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Optimal Design.html'>Optimal Design</a><li><a href='Cloud MCAD.html'>Cloud MCAD</a><li><a href='Generative Design.html'>Generative Design</a></li></li></ul></ul><li class='has-children'><a href='CMS.html'>CMS</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='CMSiMDE 已知錯誤.html'>CMSiMDE 已知錯誤</a></li></ul><li class='has-children'><a href='STL.html'>STL</a><ul class='dropdown'><li><a href='Trimesh.html'>Trimesh</a></li></li></ul></ul><li class='has-children'><a href='Tools.html'>Tools</a><ul class='dropdown'><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='GUI.html'>GUI</a><li><a href='Solvespace.html'>Solvespace</a><li class='has-children'><a href='Pyslvs-UI.html'>Pyslvs-UI</a><ul class='dropdown'><li><a href='Pyside2.html'>Pyside2</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='V-rep.html'>V-rep</a><ul class='dropdown'><li><a href='V-rep Manual.html'>V-rep Manual</a><li><a href='3D Printer.html'>3D Printer</a><li><a href='Cyber-physical.html'>Cyber-physical</a></li></ul><li><a href='FreeCAD.html'>FreeCAD</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='VRML.html'>VRML</a><li><a href='SciTE.html'>SciTE</a><li><a href='Webots Doc.html'>Webots Doc</a><li><a href='Robot Curriculum.html'>Robot Curriculum</a><li><a href='Three.js.html'>Three.js</a></li></ul><li class='has-children'><a href='Solidworks.html'>Solidworks</a><ul class='dropdown'><li><a href='SW API.html'>SW API</a></li></ul><li><a href='Libfivepy.html'>Libfivepy</a><li><a href='NX.html'>NX</a><li><a href='NX12 程式.html'>NX12 程式</a><li><a href='TeX.html'>TeX</a><li><a href='Open CAX.html'>Open CAX</a><li><a href='Bond Graphs.html'>Bond Graphs</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li class='has-children'><a href='Task1.html'>Task1</a><ul class='dropdown'><li><a href='Solvespace 編譯.html'>Solvespace 編譯</a><li><a href='Solvespace 操作.html'>Solvespace 操作</a><li><a href='機構設計與模擬.html'>機構設計與模擬</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='導入 GitExtensions.html'>導入 GitExtensions</a><li><a href='Batch Command.html'>Batch Command</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='WB Tutorial1.html'>WB Tutorial1</a><li><a href='W16 Exam.html'>W16 Exam</a><li><a href='W17 Exan.html'>W17 Exan</a></li></ul><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentary.html'>Documentary</a><li><a href='Ebooks.html'>Ebooks</a><li class='has-children'><a href='Planar Linkage.html'>Planar Linkage</a><ul class='dropdown'><li><a href='Design of Machinary.html'>Design of Machinary</a><li><a href='Graph Grammar.html'>Graph Grammar</a><li><a href='PMKS.html'>PMKS</a></li></ul><li><a href='Robotics Lib.html'>Robotics Lib</a><li><a href='CAD2CAE.html'>CAD2CAE</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">NX12 程式 << <a href='NX12 程式.html'>Previous</a> <a href='Open CAX.html'>Next</a> >> Open CAX<br /><h1>TeX</h1>
+<p><a href="http://texdoc.net/texmf-dist/doc/plain/gentle/gentle.pdf">http://texdoc.net/texmf-dist/doc/plain/gentle/gentle.pdf</a></p>
+<p><a href="https://bitbucket.org/VictorEijkhout/tex-by-topic/src/default/">https://bitbucket.org/VictorEijkhout/tex-by-topic/src/default/</a></p>
+<p><a href="http://makingtexwork.sourceforge.net/mtw/">http://makingtexwork.sourceforge.net/mtw/</a></p>
+<p><a href="ftp://tug.org/tex/impatient/book.pdf">ftp://tug.org/tex/impatient/book.pdf</a> </p>
+<p><a href="https://yihui.name/tinytex/">https://yihui.name/tinytex/</a></p><br />NX12 程式 << <a href='NX12 程式.html'>Previous</a> <a href='Open CAX.html'>Next</a> >> Open CAX</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

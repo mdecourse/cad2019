@@ -1,0 +1,137 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+  lineScale 0.4
+}
+Viewpoint {
+  orientation 0.30229752262367426 -0.8919467260598225 -0.33622499265633576 4.529438411887524
+  position 2.9038554004034776 2.891640445613609 -0.031218835494889588
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  appearance ThreadMetalPlate {
+    textureTransform TextureTransform {
+      scale 0.25 0.25
+    }
+    IBLStrength 2
+  }
+}
+Robot {
+  children [
+    Display {
+    }
+    DEF Base SolidBox {
+      translation 0 0.0196501 0
+      size 0.5 0.05 0.5
+      appearance GalvanizedMetal {
+      }
+      physics Physics {
+        density -1
+        mass 30
+      }
+    }
+    DEF Three_Links Solid {
+      translation -1.9387072593285345e-08 0.5899282148853098 1.053124190219903e-05
+      rotation -0.9903787191191333 -0.08197636950255018 -0.111489315896754 1.1015753986118597e-05
+      children [
+        DEF First_Link Shape {
+          appearance GalvanizedMetal {
+            colorOverride 0.376471 0.415686 0.46274499999999996
+            IBLStrength 4
+          }
+          geometry Box {
+            size 0.1 1.1 0.15
+          }
+        }
+        DEF First_Joint HingeJoint {
+          jointParameters HingeJointParameters {
+            position 1.125390932646287
+            anchor 0 0.53 0
+          }
+          device [
+            PositionSensor {
+            }
+            RotationalMotor {
+              name "motor_1"
+              controlPID 5 0 0
+              maxVelocity 1
+            }
+          ]
+          endPoint DEF Second_Link Solid {
+            translation 0.059999800000000235 0.65268257316405 0.2406981310476829
+            rotation -0.9999999999995007 -9.989759761046282e-07 2.5596598476095844e-08 5.158397363371017
+            children [
+              DEF Second_Link Shape {
+                appearance BrushedAluminium {
+                  textureTransform TextureTransform {
+                  }
+                  IBLStrength 3
+                }
+                geometry DEF second_link Box {
+                  size 0.04 0.6 0.07
+                }
+              }
+              DEF Second_Joint HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 0.28148959594895784
+                  anchor 0 0.25 0
+                }
+                device [
+                  RotationalMotor {
+                    name "motor_2"
+                    controlPID 1 0 0
+                    maxVelocity 1
+                    maxTorque 5
+                  }
+                  PositionSensor {
+                    name "position sensor 2"
+                  }
+                ]
+                endPoint DEF Third_Link Solid {
+                  translation 0.024999899999999506 0.4988726736769936 -0.023709424326692444
+                  rotation -0.999999999992837 3.3914082211227625e-06 -1.680641982942333e-06 0.10292302678289568
+                  children [
+                    DEF third_link Shape {
+                      appearance BrushedAluminium {
+                      }
+                      geometry DEF third_link_box Box {
+                        size 0.02 0.6 0.07
+                      }
+                    }
+                  ]
+                  boundingObject USE third_link_box
+                  physics Physics {
+                    density -1
+                    mass 0.2
+                    centerOfMass [
+                      0 0 0
+                    ]
+                  }
+                }
+              }
+            ]
+            boundingObject USE second_link
+            physics Physics {
+              density -1
+              mass 0.2
+              centerOfMass [
+                0 0 0
+              ]
+            }
+            rotationStep 0.261799
+          }
+        }
+      ]
+      boundingObject USE First_Link
+      physics Physics {
+        density -1
+        mass 1
+      }
+    }
+  ]
+  contactMaterial "basis_robot"
+  controller "twolink"
+}

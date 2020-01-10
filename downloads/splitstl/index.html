@@ -1,0 +1,426 @@
+<html>
+<title>Split STL mesh</title>
+    <body>
+        <p>This is a simple piece of javascript (licensed under the MIT license) by
+        <a href="http://www.thingiverse.com/arpruss/">Alexander Pruss</a> that splits an STL mesh file that contains multiple parts into
+        those multiple parts.</p>
+        <p>This may well fail if the mesh is defective and has points that are meant to be coincident 
+        but are merely close together.</p>
+        <p>All the processing is done in your browser--your STL is not uploaded to any server.</p>
+        <p><b>Warning:</b> If an object has a cavity surrounded by material on all sides, you will get one mesh for the outer surface
+        and an inside-out mesh for the cavity. Solving this problem would require significant coding.</p>
+        <input type="file" id="file" name="file" />
+        <ul id="console">
+        </ul>
+        <p id="progress">
+        </p>
+
+
+        <script>
+
+        var TRIANGLE_SIZE = (3+3*3)*4+2;
+        var ASCII_MODE = true;
+        var allSplitMeshes = [];
+        var baseFilaname = "";
+        var splitMeshIndex;
+        var meshes;
+
+        function getString(view, position, length) {
+            var out = "";
+
+            for (var i=0; i<length; i++) {
+                var b = view.getUint8(position + i);
+                out += String.fromCharCode(b);
+            }
+
+            return out;
+        }
+
+        // For hashing during splitting, ASCII mode is used, where vectors are stored
+        // as strings. From a binary STL, the vectors are stored as hex strings, and
+        // from an ASCII STL, they are stored as directly extracted ASCII.
+
+        function getVector(view, position) {
+            if (ASCII_MODE) {
+                function fixZero(a) {
+                    return a == 0x80000000 ? 0 : a;
+                }
+                x = fixZero(view.getUint32(position, true));
+                y = fixZero(view.getUint32(position+4, true));
+                z = fixZero(view.getUint32(position+8, true));
+                return x.toString(16)+":"+y.toString(16)+":"+z.toString(16);
+            }
+
+            x = view.getFloat32(position, true);
+            y = view.getFloat32(position+4, true);
+            z = view.getFloat32(position+8, true);
+            return [x,y,z]; // x.toString()+","+y.toString()+","+z.toString(); //[x,y,z];
+        }
+
+        function parseVector(vector) {
+            if (typeof vector === "string") {
+                var data = vector.split(":");
+                var buf = new ArrayBuffer(4);
+                var view = new DataView(buf);
+                function parse(s) {
+                    view.setUint32(0, parseInt(s,16));
+                    return view.getFloat32(0);
+                }
+                return [parse(data[0]),parse(data[1]),parse(data[2])];
+            }
+            else {
+                return vector;
+            }
+        }
+
+        function setVector(view, position, vector) {
+            if (typeof vector === "string") {
+                var data = vector.split(":");
+                view.setUint32(position, parseInt(data[0],16), true);
+                view.setUint32(position+4, parseInt(data[1],16), true);
+                view.setUint32(position+8, parseInt(data[2],16), true);
+            }
+            else {
+                view.setFloat32(position, vector[0], true);
+                view.setFloat32(position+4, vector[1], true);
+                view.setFloat32(position+8, vector[2], true);
+            }
+        }
+
+        function getVectorFromText(line, position) {
+            var data = line.substr(position).split(/[\s,]+/);
+
+            if (data.length < 3)
+                throw 'Invalid vector';
+
+            if (ASCII_MODE) {
+                var buf = new ArrayBuffer(4);
+                var view = new DataView(buf);
+
+                function toHex32(number) {
+                    view.setFloat32(0, parseFloat(number));
+                    return view.getUint32(0).toString(16);
+                }
+
+                return toHex32(data[0])+":"+toHex32(data[1])+":"+toHex32(data[2]);
+            }
+
+            return [parseFloat(data[0]), parseFloat(data[1]), parseFloat(data[2])];
+        }
+
+        function message(text) {
+            document.getElementById('console').innerHTML += '<li>'+text+'</li>';
+        }
+
+        function getASCIISTL(text) {
+            var triangles = [];
+
+            var triangle = [];
+            var normal = [0,0,0];
+
+            var lines = text.split(/[\r\n]+/);
+
+            message(lines.length+" lines of data");
+
+            for (var i = 0 ; i < lines.length ; i++ ) {
+                l = lines[i].trim().toLowerCase();
+                if (l == 'endfacet') {
+                    if (triangle.length != 3) 
+                        throw 'invalid triangle';
+                    triangles.push([triangle[0],triangle[1],triangle[2],normal]);
+                    triangle = [];
+                    normal = [0,0,0];
+                }
+                else if (l.startsWith('facet')) {
+                    if (l.length > 6) {
+                        if (l.substr(6).startsWith('normal'))
+                            normal = getVectorFromText(l, 13);
+                    }
+                }
+                else if (l.startsWith('vertex')) {
+                    if (l.length > 7) 
+                        triangle.push(getVectorFromText(l, 7));
+                }
+            }
+
+            message(String(triangles.length) + " triangles");
+
+            return triangles;
+        }
+
+        function getBinarySTL(view) {
+            var triangles = [];
+
+            var numTriangles = view.getUint32(80, true);
+
+            message(String(numTriangles) + " triangles");
+
+            for (var i = 0 ; i < numTriangles ; i++) {
+                position = 84 + TRIANGLE_SIZE*i;
+
+                normal = getVector(view, position);
+                v1 = getVector(view, position+12);
+                v2 = getVector(view, position+12*2);
+                v3 = getVector(view, position+12*3);
+                triangles.push( [v1,v2,v3,normal] );
+            }
+
+            return triangles;
+        }
+
+        function meshSelection(meshes) {
+            message(String(meshes.length)+" meshes extracted");
+
+            out = "<p>Download individual part meshes or combine them with checkmarks:<br/>";
+
+            allSplitMeshes = [];
+
+            for (var i=0; i<meshes.length; i++) {
+                allSplitMeshes.push(meshes[i].triangles);
+                out += "<input type='checkbox' id='mesh"+i+"'/><a href='#' onclick='downloadMesh(["+i+"]);'>mesh part "+(i+1)+"</a> "+describeBounds(meshes[i].bounds)+"<br/>";
+            }
+
+            out += "<button onclick='downloadMeshCombo();'>Download combination</button></p>";
+
+            document.getElementById('progress').innerHTML = out;
+        }
+
+        function downloadMeshCombo() {
+            list = [];
+            for (var i=0; i<allSplitMeshes.length; i++) {
+                if (document.getElementById('mesh'+i).checked)
+                    list.push(i);
+            }
+            if (list.length == 0)
+                return;
+            downloadMesh(list);
+        }
+
+        // 分割 Mesh
+        // 典型的 Javascript closure 設計
+        function splitMesh(triangles) {
+            meshes = [];
+            splitMeshIndex = 0;
+
+            function process() {
+                var i = splitMeshIndex;
+                var t0 = Date.now();
+
+                document.getElementById('progress').innerHTML = "Splitting "+(i/triangles.length*100).toFixed(1)+'% done ('+(meshes.length)+' parts found)';
+
+                for (; i<triangles.length; i++) {
+                    var t = triangles[i];
+                    var matches = [];
+                    
+                    // j 從 0 到 1, 到 2
+                    for (var j = 0 ; j < 3 ; j++) {
+                        // k 則從 0 增量至 meshes.length - 1, 表示逐一拿出 meshs 元素
+                        for (var k = 0 ; k < meshes.length; k++) {
+                            //  若 matches 數列為空, 且 三角形 t 中的點座標, 出現在某一 meshes 
+                            if (matches.indexOf(k) == -1 && t[j] in meshes[k].points) {
+                                // 則將 k 序號放入 matches 數列中
+                                matches.push(k);
+                            } // if
+                        } // for k
+                    } // for j
+
+                    matches.sort((x,y)=>(x<y ? -1 : (x>y ? 1 : 0)));
+
+                    var m;
+                    // matches 起始
+                    if (matches.length == 0) {
+                        m = {points:{}, triangles:[]};
+                        meshes.push(m);
+                    }
+                    else {
+                        m = meshes[matches[0]];
+                        for (var j = matches.length - 1 ; j >= 1 ; j--) {
+                            mm = meshes[matches[j]];
+                            for (var key in mm.points) {
+                                if (mm.points.hasOwnProperty(key))
+                                    m.points[key] = true;
+                            }
+                            for (var k = 0 ; k < mm.triangles.length; k++) {
+                                m.triangles.push(mm.triangles[k]);
+                            }
+                            meshes.splice(matches[j], 1);
+                        }
+                    }
+                    for (var k = 0 ; k < 3 ; k++) {
+                        m.points[t[k]] = true;
+                    }
+                    m.triangles.push(t);
+
+                    if (Date.now() >= t0 + 500) {
+                        setTimeout(process, 0);
+                        splitMeshIndex = i+1;
+                        return;
+                    }
+                } // for i
+
+                for (var i = 0 ; i < meshes.length ; i++) {
+                    var bounds = [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, 
+                            Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY ];
+
+                    for (var key in meshes[i].points) {
+                        if (meshes[i].points.hasOwnProperty(key)) {
+                            var v = parseVector(key);
+                            for (var k=0; k<3; k++) {
+                                bounds[k] = Math.min(bounds[k], v[k]);
+                                bounds[3+k] = Math.max(bounds[3+k], v[k]);
+                            } // for k
+                        } // if
+                    } // for key
+
+                    meshes[i].bounds = bounds;
+                    delete meshes[i].points;
+                } // for i
+
+                function compareByBounds(m,mm) {
+                    for (var i=0; i<6; i++) {
+                        if (m.bounds[i] < mm.bounds[i]) 
+                            return -1;
+                        else if (mm.bounds[i] < m.bounds[i])
+                            return 1;
+                    } // for i
+                    return 0;
+                } // function compareByBounds
+
+                meshes.sort(compareByBounds);
+
+                document.getElementById('progress').innerHTML = '';
+                document.getElementById('file').disabled = false;
+
+                if (meshes.length == 1) {
+                    message("No splitting done: Only one mesh in file.");
+                }
+                else if (meshes.length == 0) {
+                    message("No mesh found in file.");
+                }
+                else {
+                    meshSelection(meshes);
+                }
+
+                meshes = [];
+            } // function process
+
+            process();
+        } // 典型的 Javascript closure 設計
+
+        function downloadBlob(name,blob) {
+            var link = document.createElement('a');
+            document.body.appendChild(link);
+            link.download = name;
+            link.href = window.URL.createObjectURL(blob);
+            link.onclick = function(e) {
+                setTimeout(function() {
+                    window.URL.revokeObjectURL(link.href);
+                }, 1600);
+            };
+            link.click();
+            try {
+                link.remove();
+            }
+            catch(err) {}  
+            try {
+                document.body.removeChild(link);
+            }
+            catch(err) {}
+        }
+
+        function makeMeshByteArray(triangleLists) {
+            var totalTriangles = 0;
+
+            for (var i=0; i<triangleLists.length; i++)
+                totalTriangles += triangleLists[i].length;
+
+            var data = new ArrayBuffer(84 + totalTriangles * TRIANGLE_SIZE);
+            var view = new DataView(data);
+            view.setUint32(80, totalTriangles, true);
+            var offset = 84;
+            for (var i=0; i<triangleLists.length; i++) {
+                var triangles = triangleLists[i];
+                for (var j=0; j<triangles.length; j++) {
+                    setVector(view, offset, triangles[j][3]); // normal
+                    setVector(view, offset+12, triangles[j][0]); // v1
+                    setVector(view, offset+12*2, triangles[j][1]); // v2
+                    setVector(view, offset+12*3, triangles[j][2]); // v3
+                    offset += TRIANGLE_SIZE;
+                }
+            }
+            return view.buffer;
+        }
+
+        function downloadMesh(list) {
+            if (list.length == 0)
+                return;
+            var name = baseFilename;
+            var toMake = [];
+            for (var i=0; i<list.length; i++) {
+                name += "-" + (list[i]+1);
+                toMake.push(allSplitMeshes[list[i]]);
+            }
+            downloadBlob(name+".stl", new Blob([makeMeshByteArray(toMake)], {type: "application/octet-stream"}));
+        }
+
+        function describeBounds(bounds) {
+            return "("+bounds[0].toFixed(2)+", "+bounds[1].toFixed(2)+", "+bounds[2].toFixed(2)+") - ("+
+                    bounds[3].toFixed(2)+", "+bounds[4].toFixed(2)+", "+bounds[5].toFixed(2)+")";
+        }
+
+        function processSTL(data) {
+            length = data.byteLength;
+            view = new DataView(data);
+
+            var header = getString(view, 0, 5);
+
+            var binary = true;
+            var text;
+
+            if (header == "solid") {
+                // probably ASCII
+                text = getString(view, 0, length);
+                if (text.includes("endfacet")) {
+                    binary = false;
+                }
+            }
+
+            message(binary ? "binary STL" : "ASCII STL");
+            triangles = binary ? getBinarySTL(view) : getASCIISTL(text);
+            message("data successfully read");    
+            splitMesh(triangles);
+        }
+
+        function handleFileSelect(evt) {
+            var e = document.getElementById('progress').innerHTML = '';
+            var e = document.getElementById('file');
+            e.disabled = true;
+            allSplitMeshes = [];
+            meshes = [];
+            document.getElementById('console').innerHTML = '';
+
+            var f = evt.target.files[0];
+
+            message( "reading "+ String(f.size) + ' bytes');
+
+            var n = f.name.split(/[/\\]+/);
+            baseFilename = f.name.replace(/.*[/\\]/, "").replace(/\.[sS][tT][lL]$/, "");
+
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    processSTL(event.target.result);
+                }
+                catch(err) {
+                    message( "Error: "+err);
+                    var e = document.getElementById('file');
+                    e.disabled = false;
+                }
+            }
+            reader.readAsArrayBuffer(f);
+        }
+
+        document.getElementById('file').addEventListener('change', handleFileSelect, false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+Komponens szám	Stücklistenstruktur	ANZAHL	Beschreibung	Dateiname	Material	Geschätzte Kosten	Masse
+Izület	Normal	1		60zGelenk.ipt	ABS-Kunststoff		0,141 kg
+Kábel_Fedél	Normal	1		Cable_Cover.ipt	ABS-Kunststoff		0,009 kg
+G2_Fedél	Normal	1		Cover_G2.ipt	ABS-Kunststoff		0,012 kg
+burkolat hátoldala	Normal	1		CoverBase.ipt	ABS-Kunststoff		0,707 kg
+Drehkranz	Normal	1		Drehkranz.ipt	ABS-Kunststoff		0,077 kg
+Drehkranz_B	Normal	1		Drehkranz_B.ipt	ABS-Kunststoff		0,091 kg
+EncoderTávolság	Normal	1		EncoderDistanz.ipt	ABS-Kunststoff		0,007 kg
+MegfogóIllesztés_b	Normal	1		GripperMount_b.ipt	ABS-Kunststoff		0,007 kg
+MegfogóIllesztésLemez	Normal	1		GripperMountPlate.ipt	ABS-Kunststoff		0,003 kg
+MegfogóIllesztésTányérTömb	Normal	1		GripperMountPlatehock.ipt	ABS-Kunststoff		0,007 kg
+Csatlakozó	Normal	1		LagerKlemme.ipt	ABS-Kunststoff		0,006 kg
+magHexMount	Normal	2		magHexMount.ipt	ABS-Kunststoff		0,001 kg
+MotorCoverN24_3	Normal	1		MotorCoverN24_3.ipt	ABS-Kunststoff		0,120 kg
+OberArm_A	Normal	1		OberArm_A.ipt	ABS-Kunststoff		0,438 kg
+OberArm_B	Normal	1		OberArm_B.ipt	ABS-Kunststoff		0,450 kg
+OberArm_C	Normal	1	Printed out of 3 parts	OberArm_C.ipt	ABS-Kunststoff		1,000 kg
+OberArmMagnet	Normal	1		OberArmMagnet.ipt	ABS-Kunststoff		0,029 kg
+RotBase	Normal	1		RotBase.ipt	ABS-Kunststoff		0,911 kg
+rotBaseMagnetMount	Normal	1		rotBaseMagnetMount.ipt	ABS-Kunststoff		0,008 kg
+rotNema23Mount	Normal	1		rotNema23Mount.ipt	ABS-Kunststoff		0,063 kg
+RotoatorGear - Z60	Normal	1		RotoatorGear.ipt	ABS-Kunststoff		0,046 kg
+Shoulder_basis_N24	Normal	1	Printed out of 3 parts	Shoulder_basis_N24.ipt	ABS-Kunststoff		0,888 kg
+Synchrone Riemenscheibe T2.5 - Z60	Normal	1		Synchrone Riemenscheibe_60z_2.ipt	ABS-Kunststoff		0,019 kg
+unterArmSegment_A	Normal	1		unterArmSegment_A.ipt	ABS-Kunststoff		0,288 kg
+unterArmSegment_B	Normal	1		unterArmSegment_B.ipt	ABS-Kunststoff		0,284 kg
+Wrist_A	Normal	1	Printed out of 2 parts	Wrist_A.ipt	ABS-Kunststoff		0,236 kg
+Wrist_Cover_2	Normal	1		Wrist_Cover_2.ipt	ABS-Kunststoff		0,005 kg
+WristBearingHolder	Normal	1		WristBearingHolder.ipt	ABS-Kunststoff		0,003 kg
+WristCableHolder	Normal	1		WristCableHolder.ipt	ABS-Kunststoff		0,004 kg
+encoder_kappe	Normal	3		encoder_kappe.ipt	ABS-Kunststoff		0,004 kg
+Nema23	Gekauft	1	HIGH TORQUE MOTOR BIPOLAIR - 5709X-01S, Single Shaft	Nema23.ipt	Allgemein	20,00 €	0,159 kg
+Alu_Belt_tens	Normal	2		Alu_Belt_tens.ipt	Aluminium 6061		0,007 kg
+Belt_T_Spacer	Normal	1		Belt_T_Spacer.ipt	Aluminium 6061		0,005 kg
+Synchrone Riemenscheibe T2.5 - Z16	Gekauft	4		Synchrone Riemenscheibe16.ipt	Aluminium 6061		0,004 kg
+Synchrone Riemenscheibe T5 - Z16 -10mm	Gekauft	4	STEP AP203	16221600.ipt	Aluminium 6061		0,021 kg
+Synchrone Riemenscheibe T5 - Z16 -16mm	Gekauft	1		Synchrone Riemenscheibe21.ipt	Aluminium 6061	4,58 €	0,026 kg
+Synchrone RiemenscheibeT25_z44	Normal	1	STEP AP203	Synchrone RiemenscheibeT25_z44.ipt	Aluminium 6061		29,550 g
+Synchrone RiemenscheibeT5_z48	Gekauft	2	STEP AP203	Synchrone RiemenscheibeT5_z48.ipt	Aluminium 6061		0,100 kg
+Welle_wrist	Normal	1		Welle_wrist.ipt	Edelstahl		0,011 kg
+ISO 13337 - 3 x 20	Gekauft	2	Spannstifte, mit Schlitz, für geringe Beanspruchung	ISO 13337 - 3 x 20BS EN ISO.ipt	Edelstahl, austenitisch		0,000 kg
+ISO 13337 - 3 x 26	Gekauft	2	Spannstifte, mit Schlitz, für geringe Beanspruchung	ISO 13337 - 3 x 26BS EN ISO.ipt	Edelstahl, austenitisch		0,001 kg
+Nema17 - L48	Gekauft	1	HIGH TORQUE MOTOR BIPOLAR - 4209L-01P, Single Shaft	Nema17 48.ipt	Eisen, duktil		0,390 kg
+Nema17 - L60	Gekauft	1	HIGH TORQUE MOTOR BIPOLAR - 4209L-01P, Single Shaft	Nema17_60.ipt	Eisen, grau		0,500 kg
+Encoder with LEDs	Gekauft	3	Encoder with LEDs	encoder.ipt	Generisch		0,005 kg
+Encoder without LEDs	Gekauft	2	Encoder without LEDs	encoder_bare.ipt	Generisch		0,003 kg
+Zahnriemen T2,5 - Z127  - L317.5mm	Gekauft	1		Twisted_Belt.ipt	Generisch		0,004 kg
+Welle 5x4+7.5x15+5x4	Normal	2		Welle2.ipt	Messing, weicher Gelbton		0,007 kg
+Distanzhuelse_M3x5mm	Normal	4		Distanzhuelse_M3x5mm.ipt	Nickel-Kupfer-Legierung 400	0,09 €	0,001 kg
+Distanzhuelse_M4x20mm	Gekauft	31		Distanzhuelse_M4x20mm.ipt	Nickel-Kupfer-Legierung 400	0,20 €	0,006 kg
+encoder_kappe_clear	Normal	3		encoder_kappe_clear.ipt	Polycarbonat, klar		0,005 kg
+Zahnriemen T2,5 - Z80  - L200mm	Gekauft	3		*Varies*	Rubber		0,001 kg
+Zahnriemen T5 - Z100 - L500mm - 16mm	Gekauft	1		Zahnriemen1.ipt	Rubber		0,011 kg
+Zahnriemen T5 - Z102  - L510mm	Gekauft	1		Zahnriemen1.ipt	Rubber		0,007 kg
+Zahnriemen T5 - Z126 - L630mm	Gekauft	1		Zahnriemen1.ipt	Rubber		0,009 kg
+Zahnriemen T5 - Z68  - L340	Gekauft	2		*Varies*	Rubber		0,005 kg
+ISO 7380-1 - M4 x 30	Gekauft	1	Innensechskant-Rundkopfschraube - Produktklasse A	ISO 7380-1 - M4 x 30.ipt	Stahl		0,004 kg
+ISO 7380-1 - M4 x 35	Gekauft	1	Innensechskant-Rundkopfschraube - Produktklasse A	ISO 7380-1 - M4 x 35.ipt	Stahl		0,004 kg
+Nema24 - L88	Gekauft	2	http://www.omc-stepperonline.com/nema-24-dual-shaft-cnc-stepper-motor-35a-31nm439-ozin-24hs343504d-p-384.html	Nema24.ipt	Stahl, Guss		1,340 kg
+EncoderMagnet	Gekauft	5		EncoderMagnet.ipt	Stahl, Kohlenstoff		0,001 kg
+DIN 125 - A 3,2	Gekauft	4	Unterlegscheibe	DIN 125 - A 3,2.ipt	Stahl, weich		0,000 kg
+DIN 125 - A 4,3	Gekauft	68	Unterlegscheibe	DIN 125 - A 4,3.ipt	Stahl, weich		0,000 kg
+DIN 125 - A 5,3	Gekauft	4	Unterlegscheibe	DIN 125 - A 5,3.ipt	Stahl, weich		0,000 kg
+DIN 125 - A 6,4	Gekauft	1	Unterlegscheibe	DIN 125 - A 6,4.ipt	Stahl, weich		0,001 kg
+DIN 125 - A 8,4	Gekauft	5	Unterlegscheibe	DIN 125 - A 8,4.ipt	Stahl, weich		0,002 kg
+DIN 562 - M4	Gekauft	13	Vierkantmutter	DIN 562 - M4 x 7.ipt	Stahl, weich		0,001 kg
+DIN 625 SKF - SKF 608	Gekauft	11	Kugellager, einreihig SKF	DIN 625 SKF - SKF 608.ipt	Stahl, weich		0,012 kg
+DIN 625 SKF - SKF 61807	Gekauft	4	Kugellager, einreihig SKF	DIN 625 SKF - SKF 61807.ipt	Stahl, weich		0,027 kg
+DIN 625 SKF - SKF 61818	Gekauft	2	Kugellager, einreihig SKF	DIN 625 SKF - SKF 61818.ipt	Stahl, weich		0,265 kg
+DIN 625 SKF - SKF 624	Gekauft	12	Kugellager, einreihig SKF	DIN 625 SKF - SKF 624.ipt	Stahl, weich		0,003 kg
+DIN 625 SKF - SKF 626	Gekauft	4	Kugellager, einreihig SKF	DIN 625 SKF - SKF 626.ipt	Stahl, weich		0,008 kg
+DIN 625 T1 - 619/6 - 6 x 15 x 5	Gekauft	4	Rillenkugellager	DIN 625 T1 - 619_6 - 6 x 11 x 5.ipt	Stahl, weich		0,002 kg
+DIN 625 T1 - 624 - 4 x 13 x 5	Gekauft	7	Rillenkugellager	DIN 625 T1 - 624 - 4 x 13 x 5.ipt	Stahl, weich		0,003 kg
+DIN 7991 - M3x16	Gekauft	12	Senkschrauben mit Innensechskant	DIN 7991 - M3x16.ipt	Stahl, weich		0,001 kg
+DIN 7991 - M3x20	Gekauft	4	Senkschrauben mit Innensechskant	DIN 7991 - M3x20.ipt	Stahl, weich		0,001 kg
+DIN 7991 - M3x25	Gekauft	6	Senkschrauben mit Innensechskant	DIN 7991 - M3x25.ipt	Stahl, weich		0,001 kg
+DIN 7991 - M4x25	Gekauft	8	Senkschrauben mit Innensechskant	DIN 7991 - M4x25.ipt	Stahl, weich		0,003 kg
+DIN 7991 - M4x30	Gekauft	8	Senkschrauben mit Innensechskant	DIN 7991 - M4x30.ipt	Stahl, weich		0,003 kg
+DIN 9021 - 4,3	Gekauft	18	Unterlegscheibe	DIN 9021 - 4,3.ipt	Stahl, weich		0,001 kg
+DIN 912 - M2 x 20	Gekauft	6	Zylinderkopfschraube	DIN 912 - M2 x 0,4 x 20 x 19.ipt	Stahl, weich		0,001 kg
+DIN 912 - M3 x 10	Gekauft	12	Zylinderkopfschraube	DIN 912 - M3 x 0,5 x 10 x 8,75.ipt	Stahl, weich		0,001 kg
+DIN 912 - M3 x 16	Gekauft	7	Zylinderkopfschraube	DIN 912 - M3 x 0,5 x 16 x 14,75.ipt	Stahl, weich		0,001 kg
+DIN 912 - M4 x 20	Gekauft	3	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 20 x 18,25.ipt	Stahl, weich		0,003 kg
+DIN 912 - M4 x 25	Gekauft	5	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 25 x 23,25.ipt	Stahl, weich		0,004 kg
+DIN 912 - M4 x 30	Gekauft	26	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 30 x 20.ipt	Stahl, weich		0,004 kg
+DIN 912 - M4 x 35	Gekauft	7	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 35 x 20.ipt	Stahl, weich		0,005 kg
+DIN 912 - M4 x 40	Gekauft	3	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 40 x 20.ipt	Stahl, weich		0,005 kg
+DIN 912 - M4 x 50	Gekauft	10	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x50.ipt	Stahl, weich		0,006 kg
+DIN 912 - M4 x 55	Gekauft	19	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x55.ipt	Stahl, weich		0,006 kg
+DIN 912 - M4 x 60	Gekauft	5	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 60.ipt	Stahl, weich		0,007 kg
+DIN 912 - M4 x 70	Gekauft	18	Zylinderkopfschraube	DIN 912 - M4 x 0,7 x 70.ipt	Stahl, weich		0,008 kg
+DIN 913 - M3 x 3	Gekauft	6	Gewindestift	DIN 913 - M3 x 3.ipt	Stahl, weich		0,000 kg
+DIN 913 - M3 x 8	Gekauft	1	Gewindestift	DIN 913 - M3 x 8.ipt	Stahl, weich		0,000 kg
+DIN 913 - M4 x 16	Gekauft	2	Gewindestift	DIN 913 - M4 x 16.ipt	Stahl, weich		0,001 kg
+DIN 913 - M4 x 4	Gekauft	7	Gewindestift	DIN 913 - M4 x 4.ipt	Stahl, weich		0,000 kg
+DIN 913 - M4 x 6	Gekauft	1	Gewindestift	DIN 913 - M4 x 6.ipt	Stahl, weich		0,000 kg
+DIN 931-1 - M8 x 50	Gekauft	1	Sechskantschraube	DIN 931-1 - M8 x 50.ipt	Stahl, weich		0,026 kg
+DIN 931-1 - M8 x 55	Gekauft	2	Sechskantschraube	DIN 931-1 - M8 x 55.ipt	Stahl, weich		0,028 kg
+DIN 933 - M4  x 25	Gekauft	1	Sechskantschraube	DIN 933 - M4  x 25.ipt	Stahl, weich		0,003 kg
+DIN 933 - M4  x 30	Gekauft	4	Sechskantschraube	DIN 933 - M4  x 30.ipt	Stahl, weich		0,004 kg
+DIN 933 - M4  x 40	Gekauft	6	Sechskantschraube	DIN 933 - M4  x 40.ipt	Stahl, weich		0,005 kg
+DIN 933 - M4  x 55	Gekauft	2	Sechskantschraube	DIN 933 - M4  x 55.ipt	Stahl, weich		0,006 kg
+DIN 934 - M3	Gekauft	10	Sechskantmutter	DIN 934 - M3 x 0,5.ipt	Stahl, weich		0,000 kg
+DIN 934 - M4	Gekauft	53	Sechskantmutter	DIN 934 - M4 x 0,7.ipt	Stahl, weich		0,001 kg
+DIN 985 - M4	Gekauft	1	Sechskantmutter	DIN 985 - M4.ipt	Stahl, weich		0,001 kg
+DIN 985 - M8	Gekauft	3	Sechskantmutter	DIN 985 - M8.ipt	Stahl, weich		0,006 kg
+F624 ZZ 4x13x5	Gekauft	11	Kugellager mit Flansch	DIN 625 SKF - SKF 624_flansch.ipt	Stahl, weich	1,65 €	0,004 kg
+Welle 5x15+6x45	Normal	1		Welle1.ipt	Steel		0,011 kg
+Welle 8x120mm	Normal	1		Welle1.ipt	Steel		0,047 kg
+Welle 8x80mm	Normal	1		Welle1.ipt	Steel		0,032 kg
+[HerkuleX] DRS-010X	Gekauft	1	[HerkuleX] DRS-010X	[HerkuleX] DRS-010X.iam	Allgemein		0,014 kg

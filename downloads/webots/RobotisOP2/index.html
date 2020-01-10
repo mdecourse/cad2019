@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=0.5'>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<!-- 若無 setup 則會顯示 default Webots user guide -->
+    <script>
+      setup = {
+        'book':       'guide',
+        'page':       'robotis-op2',
+        'tab':        '',  // For backward compatibility <= R2019b revision 1.
+        'tabs':       [],
+        'anchor':     window.location.hash.substring(1),
+        'branch':     '',
+        'repository': 'cyberbotics',
+        'tag':        '',  // For backward compatibility < R2018a.
+        'url':        'https://raw.githubusercontent.com/cyberbotics/webots/'
+      }
+      console.log('Setup: ' + JSON.stringify(setup));
+    </script>
+
+<link rel='stylesheet' type='text/css' href='css/webots-doc.css'/>
+<script src='js/jquery.dialogextend.min.js'></script>
+<script src='js/highlight.min.js'></script>
+
+<script src='js/showdown.js'></script>
+<script src='js/showdown.min.js'></script>
+<script src='js/showdown-youtube.min.js'></script>
+<script src='js/mermaidAPI.min.js'></script>
+
+<script src='js/ace.js'></script>
+<script src='js/request_methods.js'></script>
+
+<script src='js/webots.min.js'></script>
+    <script src='js/showdown-extensions.js'></script>
+    <script src='js/viewer.js'></script>
+<title>Webots</title>
+</head>
+<body>
+<div id='body'>
+
+    <div class="webots-doc" id="webots-doc" style="padding:0;">
+      <div id="center" style="top:44px">
+          <div id="view"></div>
+     </div>
+    </div>
+    
+ </div>
+</body>
+</html>

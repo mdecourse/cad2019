@@ -1,0 +1,756 @@
+/**
+ * @author hanjong kim
+ * last modified: 2017.10.24
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900');
+
+body{
+    margin: 0;
+    font-family: 'Nunito', 'Roboto', sans-serif;
+    overflow: hidden;
+}
+div{
+    box-sizing: border-box;
+    cursor: default;
+}
+button, input, select, option{
+    font-family: 'Nunito', 'Roboto', sans-serif;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    outline: 0;
+}
+hr{
+    border: none;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+
+::-moz-selection {
+   background-color: #6a3fc4;
+   color: #fff;
+}
+::selection {
+    background-color: #6a3fc4;
+    color: #fff;
+}
+
+
+/* three.js canvas */
+#threejs_canvas{
+    width: 100vw;
+    height: calc( 100vh - 84px );
+}
+
+/* Title bar */
+.msketch-titlebar{
+    width: 100vw;
+    height: 48px;
+    background-color: #1e1d23;
+    z-index: 3;
+}
+
+
+.msketch-logo{
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 48px;
+    position: absolute;
+    left: 64px;
+}
+#msketch_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.msketch-titlebar-container{
+    height: 48px;
+    display: inline-block;
+    margin-left: 180px;
+    width: calc(100vw - 380px);
+}
+
+.msketch-titlebar-username{
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    outline: 0;
+    right: 32px;
+    top: 14px;
+    vertical-align: middle;
+}
+.msketch-titlebar-username i{
+    vertical-align: middle;
+    position: relative;
+    color: #888;
+    top: -1px;
+    margin-right: 6px;
+}
+
+.msketch-titlebar-btn{
+    border: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    background: none;
+    color: #fff;
+    display: inline-block;
+    float: left;
+}
+
+.msketch-titlebar-btn i{
+    font-size: 21px;
+    line-height: 48px;
+}
+
+#msketch-titlebar-filename{
+    background: none;
+    color: #fff;
+    border: none;
+    height: 32px;
+    position: relative;
+    top: 7px;
+    margin-left: 60px;
+    font-size: 16px;
+    font-weight: 200;
+    outline: 0;
+    width: calc(100% - 180px);
+}
+
+/* Tool bar */
+
+.msketch-toolbar{
+    width: 100vw;
+    height: 36px;
+    background-color: #27262c;
+    border-bottom: 1px solid #1e1d23;
+    z-index: 2;
+}
+
+
+
+.msketch-toolbar-container{
+    height: 36px;
+    display: inline-block;
+    margin-left: 64px;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.msketch-toolbar-btn{
+    border: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: none;
+    color: #fff;
+    display: inline-block;
+    float: left;
+}
+
+.msketch-toolbar-btn i{
+    font-size: 21px;
+    line-height: 36px;
+}
+.msketch-toolbar-btn img{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -6px;
+    left: -6px;
+}
+
+.msketch-toolbar-btn:hover,
+.msketch-titlebar-btn:hover{
+    background-color: #6a3fc4;
+}
+.msketch-toolbar-btn.active,
+.msketch-titlebar-btn.active{
+    background-color: #4bb7ba;
+}
+
+.msketch-toolbar-text{
+    display: inline-block;
+    line-height: 36px;
+    color: #888;
+    float: left;
+    font-size: 11px;
+    margin-right: 12px;
+}
+
+.msketch-toolbar-spacer{
+    display: inline-block;
+    line-height: 36px;
+    color: #666;
+    float: left;
+    font-size: 11px;
+    margin-right: 12px;
+    width: 64px;
+    text-align: center;
+}
+
+
+/* drawer */
+.msketch-drawer{
+    width: 240px;
+    height: calc( 100vh - 84px );
+    position: absolute;
+    top: 84px;
+    left: -240px;
+    background-color: #27262c;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.msketch-drawer-btn{
+    border: 0;
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    background: none;
+    color: #bbb;
+    font-size: 12px;
+    line-height: 48px;
+    display: block;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 32px;
+}
+
+.msketch-drawer-btn:hover{
+    background-color: #6a3fc4;
+    color: #fff;
+}
+
+.msketch-drawer-btn i{
+    font-size: 21px;
+    line-height: 48px;
+    vertical-align: middle;
+    padding-right: 16px;
+    top: -1px;
+    position: relative;
+}
+
+/* sidebar */
+.msketch-sidebar{
+    width: 36px;
+    height: calc(100vh - 84px);
+    position: absolute;
+    top: 84px;
+    right: 0;
+    background-color: #1e1d23;
+    z-index: 2;
+}
+
+/* panel */
+.msketch-panel{
+    width: 320px;
+    height: calc(100vh - 84px);
+    overflow-y: auto;
+    position: absolute;
+    top: 84px;
+    right: -320px;
+    background-color: #27262c;
+    z-index: 1;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.msketch-panel.expand{
+    right: 36px;
+}
+
+#panel_close_btn{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 12px;
+    right: 12px;
+
+    background-color: #27262c;
+    z-index: 0;
+    line-height: 48px;
+    color: #888;
+    text-align: center;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#panel_close_btn i{
+    line-height: 48px;
+}
+#panel_close_btn:hover{
+    background-color: #6a3fc4;
+    color: #fff;
+}
+
+.msketch-panel-container{
+    padding: 24px;
+}
+.msketch-panel-title{
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 36px;
+}
+.msketch-panel-desc{
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.msketch-panel-row{
+    margin-bottom: 24px;
+}
+
+.msketch-panel-input{
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    color: white;
+    background: none;
+    border-color: #888;
+    font-size: 13px;
+}
+.msketch-panel-input:disabled{
+    background: none;
+    opacity: 0.2;
+}
+.msketch-panel-btn-large{
+    border: 1px solid #888;
+    border-radius: 24px;
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    background: none;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 48px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 12px 0;
+}
+.msketch-panel-btn-large:hover{
+    background-color: #6a3fc4;
+    border: 1px solid #6a3fc4;
+    color: #fff;
+}
+.msketch-panel-btn-large.active{
+    background-color: #4bb7ba;
+    border: 1px solid #4bb7ba;
+    color: #fff;
+}
+.msketch-panel-btn-large i{
+    font-size: 21px;
+    line-height: 48px;
+    vertical-align: middle;
+    padding-right: 8px;
+    top: -2px;
+    position: relative;
+}
+
+.msketch-panel-btn{
+    border: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: none;
+    color: #fff;
+    display: inline-block;
+    float: left;
+}
+
+.msketch-panel-btn i{
+    font-size: 21px;
+    line-height: 36px;
+}
+.msketch-panel-btn img{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -6px;
+    left: -6px;
+}
+
+.msketch-panel-btn:hover,
+.msketch-titlebar-btn:hover{
+    background-color: #6a3fc4;
+}
+.msketch-panel-btn.active,
+.msketch-titlebar-btn.active{
+    background-color: #4bb7ba;
+}
+
+.msketch-panel-btn-text{
+    display: inline-block;
+    line-height: 36px;
+    color: #888;
+    float: left;
+    font-size: 12px;
+    margin-right: 18px;
+    margin-left: 6px;
+    margin-bottom: 30px;
+}
+
+.msketch-panel-label{
+    position: relative;
+    margin-top: 16px;
+    display: inline-block;
+}
+.msketch-panel-label:before{
+    content: attr(data-label);
+    position: absolute;
+    top: -18px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 12px;
+    margin-right: 6px;
+    font-style: italic;
+}
+
+.msketch-panel-select{
+    font-size: 13px;
+    color: #888;
+}
+.msketch-panel-select option{
+    color: #888;
+    background-color: #27262c;
+    font-size: 13px;
+}
+.msketch-panel-select option:focus,
+.msketch-panel-select option:hover{
+    background-color: #6a3fc4;
+    color: #fff;
+}
+
+
+/* spacer */
+.msketch-hspacer{
+    display: inline-block;
+    width: 12px;
+}
+
+
+/* tooltip */
+[data-tooltip]{
+    position: relative;
+}
+[data-tooltip]:hover{
+    position: relative;
+}
+[data-tooltip]:after{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    content: attr(data-tooltip);
+    position: absolute;
+    margin: auto;
+    top: 110%;
+    left: 0;
+    opacity: 0;
+    background-color: #1e1d23;
+	font-size: 12px;
+    padding: 6px;
+    border-radius: 3px;
+    width: auto;
+    min-width: 64px;
+	max-width: 320px;
+    z-index: 9999;
+    pointer-events: none;
+}
+[data-tooltip]:hover:after {
+	opacity: 1;
+}
+
+[data-tooltip-side]{
+    position: relative;
+}
+[data-tooltip-side]:after{
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    content: attr(data-tooltip-side);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 110%;
+    opacity: 0;
+    background-color: #1e1d23;
+	font-size: 12px;
+    padding: 6px;
+    border-radius: 3px;
+    width: auto;
+    min-width: 64px;
+	max-width: 320px;
+    z-index: 9999;
+    pointer-events: none;
+}
+[data-tooltip-side]:hover:after {
+	opacity: 1;
+}
+
+/* Dialog */
+.msketch-dialog{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(0,0,0, 0.3);
+    display: none;
+}
+.msketch-dialog-box{
+    width: 360px;
+    height: auto;
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background-color: #1e1d23;
+    padding: 32px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+
+    -webkit-transform: translateY(-50%);
+    transform: 	translateY(-50%);
+}
+
+.msketch-dialog-header{
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 24px;
+}
+.msketch-dialog-text{
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 12px;
+}
+.msketch-dialog-select{
+    width: 100%;
+    margin-bottom: 24px;
+    background-color: #27262c;
+    padding: 12px;
+    border: 1px solid #888;
+}
+.msketch-dialog-select option{
+    color: #888;
+    font-size: 13px;
+}
+.msketch-dialog-select option:focus,
+.msketch-dialog-select option:hover{
+    background-color: #6a3fc4;
+    color: #fff;
+}
+
+.msketch-dialog-btn{
+    border: 1px solid #888;
+    border-radius: 18px;
+    width: 80px;
+    height: 36px;
+    padding: 0;
+    background: none;
+    color: #bbb;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 12px 12px 0 0;
+}
+.msketch-dialog-btn:hover{
+    background-color: #6a3fc4;
+    border: 1px solid #6a3fc4;
+    color: #fff;
+}
+
+/* Message */
+.msketch-message{
+    position: absolute;
+    bottom: -48px;
+    right: 36px;
+    width: auto;
+    height: 48px;
+    z-index: 99999;
+    background-color: #6a3fc4;
+    color: #fff;
+    padding: 0 32px;
+    font-size: 13px;
+    line-height: 48px;
+
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Login */
+.msketch-login-logo{
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+.msketch-login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #27262c;
+    text-align: center;
+}
+.msketch-login-box{
+    width: 320px;
+    height: auto;
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1e1d23;
+    padding: 32px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.msketch-login-header{
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 24px;
+}
+.msketch-login-text{
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.msketch-login-btn{
+    border: 1px solid #888;
+    border-radius: 18px;
+    width: 80px;
+    height: 36px;
+    padding: 0;
+    background: none;
+    color: #bbb;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 12px 12px 0 0;
+}
+.msketch-login-btn:hover{
+    background-color: #6a3fc4;
+    border: 1px solid #6a3fc4;
+    color: #fff;
+}
+.msketch-login-btn:disabled{
+    opacity: 0.2;
+}
+
+.msketch-login-label{
+    position: relative;
+    margin-top: 24px;
+    display: inline-block;
+}
+.msketch-login-label:before{
+    content: attr(data-label);
+    position: absolute;
+    top: -14px;
+
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 12px;
+    margin-right: 6px;
+}
+.msketch-login-input{
+    width: 100%;
+    height: 32px;
+    color: white;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #888;
+    margin-bottom: 24px;
+}
+.msketch-login-message{
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 12px;
+
+}
+
+.disableClick{
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #27262c;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background: none;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #6a3fc4;
+}
+
+/*
+Dark: #1e1d23
+Light: #27262c
+Purple: #6a3fc4
+Green: #4bb7ba
+Magenta: #fc315a
+*/

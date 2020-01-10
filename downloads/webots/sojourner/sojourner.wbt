@@ -1,0 +1,46 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.19000474794684602 -0.9777074502364773 -0.0893663108209227 0.5432695529348028
+  position -0.6544304719767063 0.47766649071377093 1.8295514640163515
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction -12000 -12000 -3000
+  intensity 0.7
+}
+DEF FLOOR Solid {
+  translation 0.64 0 0
+  scale 10 10 10
+  children [
+    DEF floor Shape {
+      geometry Plane {
+      }
+    }
+  ]
+  boundingObject USE floor
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction 12000 -6000 -12000
+  intensity 0.7
+}
+SolidBox {
+  translation 0.63 0 0
+  rotation 0 1 0 0.523599
+  size 0.1 0.08 0.5
+}
+SolidBox {
+  translation 1.00846 0 0.0355244
+  rotation 0 1 0 -0.261795307179586
+  name "box(1)"
+  size 0.05 0.07 1
+}
+Sojourner {
+  translation 0 0.25 0
+}

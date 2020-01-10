@@ -1,0 +1,520 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 電腦輔助設計實習課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 電腦輔助設計實習課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 電腦輔助設計實習課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='CAD Process.html'>CAD Process</a><li><a href='Evaluation.html'>Evaluation</a><li><a href='課程表單.html'>課程表單</a><li class='has-children'><a href='Theories.html'>Theories</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Optimal Design.html'>Optimal Design</a><li><a href='Cloud MCAD.html'>Cloud MCAD</a><li><a href='Generative Design.html'>Generative Design</a></li></li></ul></ul><li class='has-children'><a href='CMS.html'>CMS</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='CMSiMDE 已知錯誤.html'>CMSiMDE 已知錯誤</a></li></ul><li class='has-children'><a href='STL.html'>STL</a><ul class='dropdown'><li><a href='Trimesh.html'>Trimesh</a></li></li></ul></ul><li class='has-children'><a href='Tools.html'>Tools</a><ul class='dropdown'><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='GUI.html'>GUI</a><li><a href='Solvespace.html'>Solvespace</a><li class='has-children'><a href='Pyslvs-UI.html'>Pyslvs-UI</a><ul class='dropdown'><li><a href='Pyside2.html'>Pyside2</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='V-rep.html'>V-rep</a><ul class='dropdown'><li><a href='V-rep Manual.html'>V-rep Manual</a><li><a href='3D Printer.html'>3D Printer</a><li><a href='Cyber-physical.html'>Cyber-physical</a></li></ul><li><a href='FreeCAD.html'>FreeCAD</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='VRML.html'>VRML</a><li><a href='SciTE.html'>SciTE</a><li><a href='Webots Doc.html'>Webots Doc</a><li><a href='Robot Curriculum.html'>Robot Curriculum</a><li><a href='Three.js.html'>Three.js</a></li></ul><li class='has-children'><a href='Solidworks.html'>Solidworks</a><ul class='dropdown'><li><a href='SW API.html'>SW API</a></li></ul><li><a href='Libfivepy.html'>Libfivepy</a><li><a href='NX.html'>NX</a><li><a href='NX12 程式.html'>NX12 程式</a><li><a href='TeX.html'>TeX</a><li><a href='Open CAX.html'>Open CAX</a><li><a href='Bond Graphs.html'>Bond Graphs</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li class='has-children'><a href='Task1.html'>Task1</a><ul class='dropdown'><li><a href='Solvespace 編譯.html'>Solvespace 編譯</a><li><a href='Solvespace 操作.html'>Solvespace 操作</a><li><a href='機構設計與模擬.html'>機構設計與模擬</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='導入 GitExtensions.html'>導入 GitExtensions</a><li><a href='Batch Command.html'>Batch Command</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='WB Tutorial1.html'>WB Tutorial1</a><li><a href='W16 Exam.html'>W16 Exam</a><li><a href='W17 Exan.html'>W17 Exan</a></li></ul><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentary.html'>Documentary</a><li><a href='Ebooks.html'>Ebooks</a><li class='has-children'><a href='Planar Linkage.html'>Planar Linkage</a><ul class='dropdown'><li><a href='Design of Machinary.html'>Design of Machinary</a><li><a href='Graph Grammar.html'>Graph Grammar</a><li><a href='PMKS.html'>PMKS</a></li></ul><li><a href='Robotics Lib.html'>Robotics Lib</a><li><a href='CAD2CAE.html'>CAD2CAE</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Task1 << <a href='Task1.html'>Previous</a> <a href='Solvespace 操作.html'>Next</a> >> Solvespace 操作<br /><h1>Solvespace 編譯</h1>
+<h4>分組作業:</h4>
+<p style="padding-left: 30px;">請各組組員分別完成 Solvespace 編譯流程後, 建立一個帶有字幕說明的導引影片, 上傳至 Youtube 並內嵌至各分組網站中.</p>
+<h4>下載可攜程式系統:</h4>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1fxMdqdCoCL__O1IpZ-Sv-A_4-c77Wx4E/view?usp=sharing">2019Fall可攜套件.7z</a></p>
+<h4>參考資料:</h4>
+<p style="padding-left: 30px;"><a href="https://2019wcm.blogspot.com/2019/03/msys2-solvespace.html">https://2019wcm.blogspot.com/2019/03/msys2-solvespace.html</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a></p>
+<h4>編譯步驟:</h4>
+<p>先將 Y:\portablegit\bin\sh.exe 改名為 sh_rename_for_solvespace.exe (透過 MSYS2 執行 shell 指令, 而非 portablegit 中的 sh.exe)</p>
+<p>git version 查驗 git 版本</p>
+<p>git 2.13 版本以上, 可以使用下列 git clone <span>--recurse-submodules 取得所有子模組資料</span></p>
+<p style="padding-left: 30px;">git clone --recurse-submodules https://github.com/solvespace/solvespace.git solvespace</p>
+<p>上述指令同:</p>
+<p style="padding-left: 30px;">git clone <span><a href="https://github.com/solvespace/solvespace.git">https://github.com/solvespace/solvespace.git</a> </span></p>
+<p style="padding-left: 30px;"><span>cd solvespace</span></p>
+<p style="padding-left: 30px;"><span>git submodule init</span></p>
+<p style="padding-left: 30px;"><span>git submodule update</span></p>
+<p>edit Y:\tmp\solvespace\extlib\angle\CMakeLists.txt comment out line 713 and 714</p>
+<p>#list(APPEND ANGLE_DEFINITIONS<br/>#"-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ \"d3dcompiler_47.dll\", \"d3dcompiler_46.dll\", \"d3dcompiler_43.dll\" }")<br/>endif()</p>
+<p>接著需要手動進行 libpng.dll.a 的編譯, 並改名為 libpng_static.a, 並放到編譯系統的 lib 目錄中 (即隨身系統的 msys64\mingw64\lib 目錄):</p>
+<p>cd solvespace</p>
+<p>cd extlib</p>
+<p>cd libpng</p>
+<p>mkdir build</p>
+<p>cd build</p>
+<p>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release<br/>mingw32-make</p>
+<p>(mingw32-make -Wl,-static)</p>
+<p>rename libpng.dll.a to libpng_static.a and copy to Y:\msys64\mingw64\lib</p>
+<p>接著回到 solvespace 原始碼目錄, 建立 build 目錄後進入 build 目錄, 執行:</p>
+<p><span>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</span><br/><span>mingw32-make</span></p>
+<p><span>編譯完成後, 可以在 build\bin 目錄中建立 solvespace.exe, 配合相關 dll 檔案後, 即可執行.</span></p>
+<p><span><a href="https://drive.google.com/open?id=1GYB2i5ESpPTrySMU9EUmN80bRcAe2CZL">下載 Solvesapce.exe 所需的 dlls</a> (登入 @gm 後下載)</span></p>
+<p><span><a href="https://drive.google.com/open?id=1TCvPaqG7-m_pGV4mNlwUBwc1lGqteCJq">下載官方使用 Visual Studio 編譯的 Solvespace.exe</a> (登入 @gm 後下載)</span></p>
+<p><a href="https://drive.google.com/open?id=16bLBcVUXWW_nQ1ki-Mtsox1DsSI-2gIj"><span>下載 Solvespace </span>986da7d 版本</a></p>
+<p><a href="https://drive.google.com/open?id=18R3erVkzKdvJmQ-ni7YzSb_izwGUkkeo">下載 Solvespace 22e4011 版本</a></p>
+<p>利用 <a href="https://webassembly.org/">WebAssembly</a> 製作的<a href="http://mde.tw/cad2019/downloads/solvespace">瀏覽器上的 Solvespace</a></p>
+<h4>Solvespace C++ 程式延伸</h4>
+<p>位於 exposed 目錄中有一個範例 CDemo.c</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/*-----------------------------------------------------------------------------
+ * Some sample code for slvs.dll. We draw some geometric entities, provide
+ * initial guesses for their positions, and then constrain them. The solver
+ * calculates their new positions, in order to satisfy the constraints.
+ *
+ * Copyright 2008-2013 Jonathan Westhues.
+ *---------------------------------------------------------------------------*/
+#ifdef WIN32
+#   include &lt;windows.h&gt;
+#endif
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdint.h&gt;
+
+#include &lt;slvs.h&gt;
+
+static Slvs_System sys;
+
+static void *CheckMalloc(size_t n)
+{
+    void *r = malloc(n);
+    if(!r) {
+        printf("out of memory!\n");
+        exit(-1);
+    }
+    return r;
+}
+
+/*-----------------------------------------------------------------------------
+ * An example of a constraint in 3d. We create a single group, with some
+ * entities and constraints.
+ *---------------------------------------------------------------------------*/
+void Example3d()
+{
+    /* This will contain a single group, which will arbitrarily number 1. */
+    Slvs_hGroup g = 1;
+
+    /* A point, initially at (x y z) = (10 10 10) */
+    sys.param[sys.params++] = Slvs_MakeParam(1, g, 10.0);
+    sys.param[sys.params++] = Slvs_MakeParam(2, g, 10.0);
+    sys.param[sys.params++] = Slvs_MakeParam(3, g, 10.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint3d(101, g, 1, 2, 3);
+    /* and a second point at (20 20 20) */
+    sys.param[sys.params++] = Slvs_MakeParam(4, g, 20.0);
+    sys.param[sys.params++] = Slvs_MakeParam(5, g, 20.0);
+    sys.param[sys.params++] = Slvs_MakeParam(6, g, 20.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint3d(102, g, 4, 5, 6);
+    /* and a line segment connecting them. */
+    sys.entity[sys.entities++] = Slvs_MakeLineSegment(200, g,
+                                        SLVS_FREE_IN_3D, 101, 102);
+
+    /* The distance between the points should be 30.0 units. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            1, g,
+                                            SLVS_C_PT_PT_DISTANCE,
+                                            SLVS_FREE_IN_3D,
+                                            30.0,
+                                            101, 102, 0, 0);
+
+    /* Let's tell the solver to keep the second point as close to constant
+     * as possible, instead moving the first point. */
+    sys.dragged[0] = 4;
+    sys.dragged[1] = 5;
+    sys.dragged[2] = 6;
+
+    /* Now that we have written our system, we solve. */
+    Slvs_Solve(&amp;sys, g);
+
+    if(sys.result == SLVS_RESULT_OKAY) {
+        printf("okay; now at (%.3f %.3f %.3f)\n"
+               "             (%.3f %.3f %.3f)\n",
+                sys.param[0].val, sys.param[1].val, sys.param[2].val,
+                sys.param[3].val, sys.param[4].val, sys.param[5].val);
+        printf("%d DOF\n", sys.dof);
+    } else {
+        printf("solve failed");
+    }
+}
+
+/*-----------------------------------------------------------------------------
+ * An example of a constraint in 2d. In our first group, we create a workplane
+ * along the reference frame's xy plane. In a second group, we create some
+ * entities in that group and dimension them.
+ *---------------------------------------------------------------------------*/
+void Example2d()
+{
+    Slvs_hGroup g;
+    double qw, qx, qy, qz;
+
+    g = 1;
+    /* First, we create our workplane. Its origin corresponds to the origin
+     * of our base frame (x y z) = (0 0 0) */
+    sys.param[sys.params++] = Slvs_MakeParam(1, g, 0.0);
+    sys.param[sys.params++] = Slvs_MakeParam(2, g, 0.0);
+    sys.param[sys.params++] = Slvs_MakeParam(3, g, 0.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint3d(101, g, 1, 2, 3);
+    /* and it is parallel to the xy plane, so it has basis vectors (1 0 0)
+     * and (0 1 0). */
+    Slvs_MakeQuaternion(1, 0, 0,
+                        0, 1, 0, &amp;qw, &amp;qx, &amp;qy, &amp;qz);
+    sys.param[sys.params++] = Slvs_MakeParam(4, g, qw);
+    sys.param[sys.params++] = Slvs_MakeParam(5, g, qx);
+    sys.param[sys.params++] = Slvs_MakeParam(6, g, qy);
+    sys.param[sys.params++] = Slvs_MakeParam(7, g, qz);
+    sys.entity[sys.entities++] = Slvs_MakeNormal3d(102, g, 4, 5, 6, 7);
+
+    sys.entity[sys.entities++] = Slvs_MakeWorkplane(200, g, 101, 102);
+
+    /* Now create a second group. We'll solve group 2, while leaving group 1
+     * constant; so the workplane that we've created will be locked down,
+     * and the solver can't move it. */
+    g = 2;
+    /* These points are represented by their coordinates (u v) within the
+     * workplane, so they need only two parameters each. */
+    sys.param[sys.params++] = Slvs_MakeParam(11, g, 10.0);
+    sys.param[sys.params++] = Slvs_MakeParam(12, g, 20.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(301, g, 200, 11, 12);
+
+    sys.param[sys.params++] = Slvs_MakeParam(13, g, 20.0);
+    sys.param[sys.params++] = Slvs_MakeParam(14, g, 10.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(302, g, 200, 13, 14);
+
+    /* And we create a line segment with those endpoints. */
+    sys.entity[sys.entities++] = Slvs_MakeLineSegment(400, g,
+                                        200, 301, 302);
+
+    /* Now three more points. */
+    sys.param[sys.params++] = Slvs_MakeParam(15, g, 100.0);
+    sys.param[sys.params++] = Slvs_MakeParam(16, g, 120.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(303, g, 200, 15, 16);
+
+    sys.param[sys.params++] = Slvs_MakeParam(17, g, 120.0);
+    sys.param[sys.params++] = Slvs_MakeParam(18, g, 110.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(304, g, 200, 17, 18);
+
+    sys.param[sys.params++] = Slvs_MakeParam(19, g, 115.0);
+    sys.param[sys.params++] = Slvs_MakeParam(20, g, 115.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(305, g, 200, 19, 20);
+
+    /* And arc, centered at point 303, starting at point 304, ending at
+     * point 305. */
+    sys.entity[sys.entities++] = Slvs_MakeArcOfCircle(401, g, 200, 102,
+                                    303, 304, 305);
+
+    /* Now one more point, and a distance */
+    sys.param[sys.params++] = Slvs_MakeParam(21, g, 200.0);
+    sys.param[sys.params++] = Slvs_MakeParam(22, g, 200.0);
+    sys.entity[sys.entities++] = Slvs_MakePoint2d(306, g, 200, 21, 22);
+
+    sys.param[sys.params++] = Slvs_MakeParam(23, g, 30.0);
+    sys.entity[sys.entities++] = Slvs_MakeDistance(307, g, 200, 23);
+
+    /* And a complete circle, centered at point 306 with radius equal to
+     * distance 307. The normal is 102, the same as our workplane. */
+    sys.entity[sys.entities++] = Slvs_MakeCircle(402, g, 200,
+                                    306, 102, 307);
+
+
+    /* The length of our line segment is 30.0 units. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            1, g,
+                                            SLVS_C_PT_PT_DISTANCE,
+                                            200,
+                                            30.0,
+                                            301, 302, 0, 0);
+
+    /* And the distance from our line segment to the origin is 10.0 units. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            2, g,
+                                            SLVS_C_PT_LINE_DISTANCE,
+                                            200,
+                                            10.0,
+                                            101, 0, 400, 0);
+    /* And the line segment is vertical. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            3, g,
+                                            SLVS_C_VERTICAL,
+                                            200,
+                                            0.0,
+                                            0, 0, 400, 0);
+    /* And the distance from one endpoint to the origin is 15.0 units. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            4, g,
+                                            SLVS_C_PT_PT_DISTANCE,
+                                            200,
+                                            15.0,
+                                            301, 101, 0, 0);
+#if 0
+    /* And same for the other endpoint; so if you add this constraint then
+     * the sketch is overconstrained and will signal an error. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            5, g,
+                                            SLVS_C_PT_PT_DISTANCE,
+                                            200,
+                                            18.0,
+                                            302, 101, 0, 0);
+#endif /* 0 */
+
+    /* The arc and the circle have equal radius. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            6, g,
+                                            SLVS_C_EQUAL_RADIUS,
+                                            200,
+                                            0.0,
+                                            0, 0, 401, 402);
+    /* The arc has radius 17.0 units. */
+    sys.constraint[sys.constraints++] = Slvs_MakeConstraint(
+                                            7, g,
+                                            SLVS_C_DIAMETER,
+                                            200,
+                                            17.0*2,
+                                            0, 0, 401, 0);
+
+    /* If the solver fails, then ask it to report which constraints caused
+     * the problem. */
+    sys.calculateFaileds = 1;
+
+    /* And solve. */
+    Slvs_Solve(&amp;sys, g);
+
+    if(sys.result == SLVS_RESULT_OKAY) {
+        printf("solved okay\n");
+        printf("line from (%.3f %.3f) to (%.3f %.3f)\n",
+                sys.param[7].val, sys.param[8].val,
+                sys.param[9].val, sys.param[10].val);
+
+        printf("arc center (%.3f %.3f) start (%.3f %.3f) finish (%.3f %.3f)\n",
+                sys.param[11].val, sys.param[12].val,
+                sys.param[13].val, sys.param[14].val,
+                sys.param[15].val, sys.param[16].val);
+
+        printf("circle center (%.3f %.3f) radius %.3f\n",
+                sys.param[17].val, sys.param[18].val,
+                sys.param[19].val);
+        printf("%d DOF\n", sys.dof);
+    } else {
+        int i;
+        printf("solve failed: problematic constraints are:");
+        for(i = 0; i &lt; sys.faileds; i++) {
+            printf(" %d", sys.failed[i]);
+        }
+        printf("\n");
+        if(sys.result == SLVS_RESULT_INCONSISTENT) {
+            printf("system inconsistent\n");
+        } else {
+            printf("system nonconvergent\n");
+        }
+    }
+}
+
+int main()
+{
+    sys.param      = CheckMalloc(50*sizeof(sys.param[0]));
+    sys.entity     = CheckMalloc(50*sizeof(sys.entity[0]));
+    sys.constraint = CheckMalloc(50*sizeof(sys.constraint[0]));
+
+    sys.failed  = CheckMalloc(50*sizeof(sys.failed[0]));
+    sys.faileds = 50;
+
+    /*Example3d();*/
+    for(;;) {
+        Example2d();
+        sys.params = sys.constraints = sys.entities = 0;
+        break;
+    }
+    return 0;
+}
+
+</pre>
+<p>編譯 CDemo.c 流程:</p>
+<p>首先將 solvespace/include/slvs.h 複製到 Y:\msys64\mingw64\include</p>
+<p>接著將先前 build 目錄中的 libslvs.dll 複製到 Y:\msys64\mingw64\lib</p>
+<p>然後在 solvespace\exposed\ 目錄中建立 build 目錄, 然後以指令模式進入此一 build 目錄後, 執行:</p>
+<p><span>cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release</span><br/><span>mingw32-make</span></p>
+<p><span>就可以完成 CDemo.exe 的編譯, 必須配合 libslvs.dll 與 libwinpthread-1.dll 執行.</span></p>
+<p><span>設計原理:</span></p>
+<p style="padding-left: 30px;"><a href="https://github.com/solvespace/solvespace/commit/67139236fc0b63e06eaa1efa8fe0022df5612bd2">Solvespace 首次提交到 Github</a></p>
+<p style="padding-left: 30px;"><a href="http://solvespace.com/forum.pl?action=viewthread&amp;parent=1893&amp;tt=1493369400">來源</a>, <a href="./../downloads/Watertight Trimmed NURBS.pdf">Watertight Trimmed NURBS.pdf</a></p>
+<p style="padding-left: 30px;"><span>SolveSpace represents curves and surfaces in a form equivalent to NURBS, by their rational polynomial parametric equations. That can represent a lot of geometry exactly, but not everything (for example, not the general intersection curve of two cylinders). When no exact representation of that form exists, SolveSpace approximates. This is the same approach that commercial libraries (Parasolid, Solids++, etc.) take.</span></p>
+<p style="padding-left: 30px;"><span>There's just a lot of cases, and a lot of work to test that you've covered them all. As far as I know, the highest-quality commercial libraries get their robustness mostly from exhaustive enumeration of special cases, or trying multiple differently-broken algorithms until something works, and less from anything that's mathematically interesting in isolation.</span></p>
+<p style="padding-left: 30px;"><span>A trimming curve is typically a degree-three NURBS curve defined in the parameter domain of a NURBS surface. The image of such a trimming curve on a bicubic patch (i.e., the curve on the bicubic patch in R3 that the trimming curve maps to) is degree ≤ 18 and algebraic genus zero. However, a generic intersection curve of two bicubic surfaces is degree 324 in R3 and algebraic genus 433. Hence, intersection curves can only be approximated by parametric trimming curves.</span></p>
+<p><span></span></p><br />Task1 << <a href='Task1.html'>Previous</a> <a href='Solvespace 操作.html'>Next</a> >> Solvespace 操作</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
