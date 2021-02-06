@@ -1,2 +1,0 @@
-# cmsimde
-cmsimde main scripts
